@@ -777,7 +777,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .scroll-hint { display: none; }
   .marquee { padding: 6px 0; }
   .marquee-track { font-size: 0.65rem; letter-spacing: 0.18em; }
-  .about-photo { float: none; width: 120px; margin: 0 0 20px; }
+  .about-photo { float: none; width: 160px; margin: 0 auto 24px; }
   .about-name { font-size: 1.4rem; margin-bottom: 12px; }
   .about-name-en { font-size: 0.75rem; }
   .about-affiliation { font-size: 0.8rem; line-height: 1.7; }
