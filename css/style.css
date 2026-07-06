@@ -509,15 +509,6 @@ body.hero-in .line-inner { transform: translateY(0); }
   color: var(--ink-soft);
   margin-bottom: 1em;
 }
-.about-email {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-  margin-bottom: 1.6em;
-}
-.about-email svg { flex-shrink: 0; color: var(--accent-sky); }
 .about-policy {
   font-family: var(--font-accent);
   font-weight: 700;
@@ -770,6 +761,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   color: var(--ink-soft);
 }
 .sns-btn:hover { transform: translateY(-6px); }
+.sns-mail:hover { box-shadow: 0 18px 36px rgba(111, 203, 224, 0.4); }
 .sns-x:hover { box-shadow: 0 18px 36px rgba(157, 184, 232, 0.4); }
 .sns-gh:hover { box-shadow: 0 18px 36px rgba(232, 168, 204, 0.4); }
 
