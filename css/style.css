@@ -664,42 +664,10 @@ body.hero-in .line-inner { transform: translateY(0); }
 .thumb-6 { background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)); }
 
 /* ------------------------------------------------------------
-   playground (generative poster)
+   playground
    ------------------------------------------------------------ */
 .section-playground { text-align: center; }
 .section-playground .section-head { justify-content: center; }
-.playground-lead { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 46px; }
-
-.poster-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
-.poster-frame {
-  padding: 16px;
-  border-radius: var(--radius);
-  background: rgba(253, 253, 253, 0.85);
-  border: 1px solid rgba(139, 134, 153, 0.14);
-  box-shadow: 0 24px 60px rgba(157, 184, 232, 0.25);
-  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1.2), box-shadow 0.35s ease;
-}
-.poster-frame:hover {
-  transform: translateY(-6px) rotate(-0.6deg);
-  box-shadow: 0 34px 70px rgba(232, 168, 204, 0.3);
-}
-#posterCanvas {
-  display: block;
-  width: min(420px, 78vw);
-  height: auto;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.poster-controls {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
 
 .playground-project {
   display: flex;
@@ -738,30 +706,6 @@ body.hero-in .line-inner { transform: translateY(0); }
   color: var(--ink-soft);
   margin-top: 4px;
 }
-.poster-seed {
-  font-family: var(--font-accent);
-  font-size: 0.85rem;
-  letter-spacing: 0.18em;
-  color: var(--ink-soft);
-}
-.btn-generate {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.18em;
-  padding: 12px 28px;
-  border-radius: 999px;
-  border: 1px solid rgba(139, 134, 153, 0.2);
-  background: linear-gradient(120deg, rgba(207, 228, 245, 0.6), rgba(245, 211, 231, 0.6));
-  color: var(--ink);
-  cursor: pointer;
-  transition: transform 0.22s cubic-bezier(0.2, 0.7, 0.3, 1.5), box-shadow 0.22s ease;
-}
-.btn-generate:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(157, 184, 232, 0.35);
-}
-.btn-generate:active { transform: translateY(-1px); }
 
 /* ------------------------------------------------------------
    contact
