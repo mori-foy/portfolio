@@ -400,6 +400,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
+  line-height: 1;
   letter-spacing: 0.25em;
   color: transparent;
   -webkit-text-stroke: 1px var(--ink-soft);
@@ -759,6 +760,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   .hero-cards { transform: scale(0.45); transform-origin: top right; right: 4px; }
   .hero-meta { display: none; }
   .scroll-hint { display: none; }
+  .marquee { padding: 6px 0; }
+  .marquee-track { font-size: 0.85rem; }
 }
 @media (max-width: 520px) {
   html { font-size: 15px; }
