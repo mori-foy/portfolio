@@ -599,4 +599,15 @@ void main(){
     syncMarqueeShift();
     window.addEventListener("resize", syncMarqueeShift);
   }
+
+  /* ---------- about photo: crossfade between portraits ---------- */
+  const aboutPhotoImgs = document.querySelectorAll("#aboutPhoto .about-photo-img");
+  if (aboutPhotoImgs.length > 1 && !REDUCED) {
+    let activeIndex = 0;
+    setInterval(() => {
+      aboutPhotoImgs[activeIndex].classList.remove("is-active");
+      activeIndex = (activeIndex + 1) % aboutPhotoImgs.length;
+      aboutPhotoImgs[activeIndex].classList.add("is-active");
+    }, 4000);
+  }
 })();
