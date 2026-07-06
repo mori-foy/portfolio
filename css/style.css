@@ -800,6 +800,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   .about-name-en { font-size: 0.75rem; }
   .about-affiliation { font-size: 0.8rem; line-height: 1.7; }
   .about-policy { font-size: 1rem; line-height: 1.6; padding-left: 14px; }
+  .history li { font-size: 0.78rem; gap: 10px; }
+  .history li span { width: 7em; }
 }
 @media (max-width: 520px) {
   html { font-size: 15px; }
