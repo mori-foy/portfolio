@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PORTFOLIO — Your Name</title>
+<meta name="description" content="グラフィックデザイナーのポートフォリオサイト" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- scroll progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- floating pastel blobs (parallax) -->
+<div class="blobs" aria-hidden="true">
+  <div class="blob blob-a" data-speed="0.15"></div>
+  <div class="blob blob-b" data-speed="0.28"></div>
+  <div class="blob blob-c" data-speed="0.10"></div>
+  <div class="blob blob-d" data-speed="0.22"></div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="#top">P<span class="logo-dot">.</span></a>
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#works">Works</a>
+    <a href="#playground">Playground</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <canvas id="heroGL" class="hero-gl" aria-hidden="true"></canvas>
+
+    <div class="hero-copy">
+      <p class="hero-kicker">
+        <span class="line" style="--d: 0s"><span class="line-inner">Portfolio — 2026</span></span>
+      </p>
+      <!-- ▼▼ ここにあなたの名前を入れてください ▼▼ -->
+      <h1 class="hero-name">
+        <span class="line" style="--d: 0.1s"><span class="line-inner">Your Name</span></span>
+        <span class="line" style="--d: 0.2s"><span class="line-inner">Graphic Designer</span></span>
+      </h1>
+      <p class="hero-roles">
+        <span class="line" style="--d: 0.32s"><span class="line-inner">Graphic Design / Illustration / Web</span></span>
+        <span class="line" style="--d: 0.4s"><span class="line-inner">Tokyo, Japan — Available for work</span></span>
+      </p>
+      <a class="hero-cta" href="#works">
+        <span class="line" style="--d: 0.5s"><span class="line-inner">View Works →</span></span>
+      </a>
+    </div>
+
+    <nav class="hero-cards" aria-label="セクションショートカット">
+      <a class="g-card g-card-1" href="#works" data-depth="1">
+        <span class="g-card-body">
+          <span class="g-tag">Works</span>
+          <span class="g-num">01</span>
+          <span class="g-arrow">↗</span>
+        </span>
+      </a>
+      <a class="g-card g-card-2" href="#playground" data-depth="0.55">
+        <span class="g-card-body">
+          <span class="g-tag">Playground</span>
+          <span class="g-num">02</span>
+          <span class="g-arrow">↗</span>
+        </span>
+      </a>
+      <a class="g-card g-card-3" href="#about" data-depth="1.6">
+        <span class="g-card-body">
+          <span class="g-tag">About</span>
+          <span class="g-num">03</span>
+          <span class="g-arrow">↗</span>
+        </span>
+      </a>
+    </nav>
+
+    <div class="hero-meta">
+      <span>TOKYO, JP — <span id="heroClock">--:--:--</span></span>
+      <span>35.68°N, 139.76°E</span>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>scroll</span>
+      <i></i>
+    </div>
+  </section>
+
+  <!-- marquee strip -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>GRAPHIC — ILLUSTRATION — PIXEL ART — WEB DESIGN — </span>
+      <span>GRAPHIC — ILLUSTRATION — PIXEL ART — WEB DESIGN — </span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <span class="section-num">01</span>
+      <h2 class="section-title" data-split>ABOUT</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <!-- ▼▼ 自己紹介文を書き換えてください ▼▼ -->
+        <p>
+          はじめまして。グラフィックデザインとイラストレーションを軸に活動しています。
+          淡い色彩とキャラクターデザインが得意で、紙・Web・グッズなど媒体を問わず制作しています。
+        </p>
+        <p>
+          「見た人の気持ちがすこし軽くなるデザイン」をテーマに、
+          日々手を動かしています。
+        </p>
+      </div>
+
+      <div class="about-skills reveal delay-2">
+        <h3 class="mini-title">Skills</h3>
+        <ul class="skill-tags">
+          <li>Graphic Design</li>
+          <li>Illustration</li>
+          <li>Pixel Art</li>
+          <li>Character Design</li>
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+          <li>Figma</li>
+          <li>HTML / CSS</li>
+        </ul>
+
+        <h3 class="mini-title">History</h3>
+        <!-- ▼▼ 経歴を書き換えてください ▼▼ -->
+        <ul class="history">
+          <li><span>20XX</span>◯◯デザイン専門学校 卒業</li>
+          <li><span>20XX</span>株式会社◯◯ 入社(グラフィックデザイナー)</li>
+          <li><span>20XX</span>フリーランスとして活動開始</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORKS ============ -->
+  <section class="section" id="works">
+    <div class="section-head reveal">
+      <span class="section-num">02</span>
+      <h2 class="section-title" data-split>WORKS</h2>
+    </div>
+
+    <!-- ▼▼ 作品を追加するときはこの .work-card を複製して、
+            画像を入れる場合は .work-thumb の中に <img> を置いてください ▼▼ -->
+    <div class="works-grid">
+      <article class="work-card reveal">
+        <div class="work-thumb thumb-1"><span class="thumb-label">COMING SOON</span></div>
+        <h3>作品タイトル 01</h3>
+        <p>Graphic / 2026</p>
+      </article>
+      <article class="work-card reveal delay-1">
+        <div class="work-thumb thumb-2"><span class="thumb-label">COMING SOON</span></div>
+        <h3>作品タイトル 02</h3>
+        <p>Illustration / 2026</p>
+      </article>
+      <article class="work-card reveal delay-2">
+        <div class="work-thumb thumb-3"><span class="thumb-label">COMING SOON</span></div>
+        <h3>作品タイトル 03</h3>
+        <p>Pixel Art / 2026</p>
+      </article>
+      <article class="work-card reveal">
+        <div class="work-thumb thumb-4"><span class="thumb-label">COMING SOON</span></div>
+        <h3>作品タイトル 04</h3>
+        <p>Web Design / 2025</p>
+      </article>
+      <article class="work-card reveal delay-1">
+        <div class="work-thumb thumb-5"><span class="thumb-label">COMING SOON</span></div>
+        <h3>作品タイトル 05</h3>
+        <p>Goods / 2025</p>
+      </article>
+      <article class="work-card reveal delay-2">
+        <div class="work-thumb thumb-6"><span class="thumb-label">COMING SOON</span></div>
+        <h3>作品タイトル 06</h3>
+        <p>Logo / 2025</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PLAYGROUND ============ -->
+  <section class="section section-playground" id="playground">
+    <div class="section-head reveal">
+      <span class="section-num">03</span>
+      <h2 class="section-title" data-split>PLAYGROUND</h2>
+    </div>
+
+    <p class="playground-lead reveal">
+      押すたびに一度きりのグラフィックが生まれる、ジェネラティブ・ポスター。<br />
+      ポスター本体をクリックしても再生成できます。
+    </p>
+
+    <div class="poster-wrap reveal delay-1">
+      <div class="poster-frame">
+        <canvas id="posterCanvas" width="840" height="1120" aria-label="ジェネラティブアートのポスター(クリックで再生成)"></canvas>
+      </div>
+      <div class="poster-controls">
+        <span class="poster-seed" id="posterSeed">No. 0000</span>
+        <button class="btn-generate" id="btnGenerate" type="button">GENERATE ↺</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="section-head reveal">
+      <span class="section-num">04</span>
+      <h2 class="section-title" data-split>CONTACT</h2>
+    </div>
+
+    <p class="contact-lead reveal">
+      お仕事のご依頼・ご相談は SNS の DM からお気軽にどうぞ。
+    </p>
+
+    <!-- ▼▼ アカウントの URL を書き換えてください ▼▼ -->
+    <div class="sns-links reveal delay-1">
+      <a class="sns-btn sns-x" href="https://x.com/your_handle" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span>X (Twitter)</span>
+        <em>@your_handle</em>
+      </a>
+      <a class="sns-btn sns-gh" href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        <span>GitHub</span>
+        <em>@your-username</em>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Your Name — made with soft colors</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
