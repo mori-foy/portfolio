@@ -419,8 +419,10 @@ body.has-cursor canvas { cursor: none; }
 /* ------------------------------------------------------------
    marquee
    ------------------------------------------------------------ */
-.marquee {
+.marquee-wrap {
   position: relative;
+}
+.marquee {
   overflow: hidden;
   border-top: 1px solid rgba(139, 134, 153, 0.14);
   border-bottom: 1px solid rgba(139, 134, 153, 0.14);
@@ -429,11 +431,10 @@ body.has-cursor canvas { cursor: none; }
 }
 .marquee-runner {
   position: absolute;
-  top: 50%;
+  bottom: 100%;
   left: 100%;
   width: clamp(48px, 6vw, 72px);
   height: auto;
-  transform: translateY(-58%);
   image-rendering: pixelated;
   pointer-events: none;
   z-index: 2;
