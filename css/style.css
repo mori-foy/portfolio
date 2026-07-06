@@ -700,6 +700,44 @@ body.hero-in .line-inner { transform: translateY(0); }
   align-items: center;
   gap: 20px;
 }
+
+.playground-project {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--ink);
+  background: rgba(253, 253, 253, 0.85);
+  border: 1px solid rgba(139, 134, 153, 0.14);
+  border-radius: var(--radius);
+  padding: clamp(28px, 5vw, 44px) clamp(36px, 8vw, 64px);
+  box-shadow: 0 24px 60px rgba(157, 184, 232, 0.25);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1.2), box-shadow 0.35s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px) rotate(-0.6deg);
+  box-shadow: 0 34px 70px rgba(232, 168, 204, 0.3);
+}
+.project-logo img {
+  width: min(260px, 46vw);
+  height: auto;
+}
+.project-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-top: 20px;
+}
+.project-card p {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
 .poster-seed {
   font-family: var(--font-accent);
   font-size: 0.85rem;
