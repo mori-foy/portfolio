@@ -419,9 +419,6 @@ body.has-cursor canvas { cursor: none; }
 /* ------------------------------------------------------------
    marquee
    ------------------------------------------------------------ */
-.marquee-wrap {
-  position: relative;
-}
 .marquee {
   overflow: hidden;
   border-top: 1px solid rgba(139, 134, 153, 0.14);
@@ -429,25 +426,23 @@ body.has-cursor canvas { cursor: none; }
   padding: 14px 0;
   background: rgba(253, 253, 253, 0.6);
 }
-.marquee-runner {
-  position: absolute;
-  bottom: 100%;
-  left: 100%;
+.corner-runner {
+  position: fixed;
+  bottom: clamp(16px, 4vh, 32px);
+  right: clamp(16px, 5vw, 48px);
   width: clamp(48px, 6vw, 72px);
   height: auto;
   image-rendering: pixelated;
   pointer-events: none;
-  z-index: 2;
-  animation: marquee-run 7s linear infinite;
+  z-index: 50;
 }
-@keyframes marquee-run {
-  from { left: 100%; }
-  to { left: -80px; }
+@media (max-width: 520px) {
+  .corner-runner { display: none; }
 }
 .marquee-track {
   display: flex;
   white-space: nowrap;
-  animation: marquee 26s linear infinite;
+  animation: marquee 16s linear infinite;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
