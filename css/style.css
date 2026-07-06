@@ -568,6 +568,8 @@ body.has-cursor canvas { cursor: none; }
   font-family: var(--font-accent);
   color: var(--accent-sky);
   flex-shrink: 0;
+  width: 8.6em;
+  white-space: nowrap;
 }
 
 /* ------------------------------------------------------------
