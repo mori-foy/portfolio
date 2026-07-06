@@ -333,52 +333,6 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .g-card:hover .g-arrow { transform: translate(4px, -4px); }
 
-/* ------------------------------------------------------------
-   custom cursor
-   ------------------------------------------------------------ */
-body.has-cursor,
-body.has-cursor a,
-body.has-cursor button,
-body.has-cursor canvas { cursor: none; }
-
-.cursor-dot,
-.cursor-ring {
-  position: fixed;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.cursor-dot { z-index: 10001; }
-.cursor-dot::after {
-  content: "";
-  position: absolute;
-  left: -3.5px;
-  top: -3.5px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--ink);
-}
-.cursor-ring { z-index: 10000; }
-.cursor-ring::after {
-  content: "";
-  position: absolute;
-  left: -17px;
-  top: -17px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(74, 70, 85, 0.4);
-  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-}
-.cursor-ring.is-active::after {
-  transform: scale(1.55);
-  background: rgba(232, 168, 204, 0.16);
-  border-color: rgba(232, 168, 204, 0.7);
-}
-
 .scroll-hint {
   position: absolute;
   bottom: 26px;

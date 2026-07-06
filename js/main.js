@@ -2,7 +2,6 @@
    PORTFOLIO — main.js
    - hero: WebGL liquid pastel field / glass cards tilt /
            masked line reveal / live clock
-   - custom cursor (dot + trailing ring)
    - playground: generative poster (seeded, animated)
    - scroll effects (reveal, parallax blobs, progress bar)
    ============================================================ */
@@ -236,60 +235,6 @@ void main(){
     };
     tick();
     setInterval(tick, 1000);
-  }
-
-  /* ==========================================================
-     2. CUSTOM CURSOR — dot + trailing ring
-     ========================================================== */
-
-  if (FINE && !REDUCED) {
-    const dot = document.createElement("div");
-    dot.className = "cursor-dot";
-    const ring = document.createElement("div");
-    ring.className = "cursor-ring";
-    document.body.append(dot, ring);
-    document.body.classList.add("has-cursor");
-
-    let dx = innerWidth / 2, dy = innerHeight / 2;
-    let rx = dx, ry = dy;
-    let visible = false, cRaf = null;
-
-    function cursorLoop() {
-      rx += (dx - rx) * 0.16;
-      ry += (dy - ry) * 0.16;
-      ring.style.transform = `translate3d(${rx.toFixed(1)}px, ${ry.toFixed(1)}px, 0)`;
-      if (Math.abs(dx - rx) + Math.abs(dy - ry) > 0.3) cRaf = requestAnimationFrame(cursorLoop);
-      else cRaf = null;
-    }
-
-    window.addEventListener(
-      "pointermove",
-      (e) => {
-        dx = e.clientX;
-        dy = e.clientY;
-        if (!visible) {
-          visible = true;
-          dot.style.opacity = "1";
-          ring.style.opacity = "1";
-        }
-        dot.style.transform = `translate3d(${dx}px, ${dy}px, 0)`;
-        if (!cRaf) cursorLoop();
-      },
-      { passive: true }
-    );
-
-    document.addEventListener("mouseover", (e) => {
-      ring.classList.toggle(
-        "is-active",
-        !!e.target.closest("a, button, #posterCanvas, .work-card")
-      );
-    });
-
-    document.documentElement.addEventListener("mouseleave", () => {
-      dot.style.opacity = "0";
-      ring.style.opacity = "0";
-      visible = false;
-    });
   }
 
   /* ==========================================================
