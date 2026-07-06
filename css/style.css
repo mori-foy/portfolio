@@ -14,7 +14,7 @@
   --pastel-mint: #c8ecd9;
 
   --accent: #9db8e8;
-  --accent-pink: #e8a8cc;
+  --accent-sky: #6fcbe0;
 
   --radius: 22px;
   --header-h: 68px;
@@ -116,7 +116,7 @@ body {
   text-decoration: none;
   letter-spacing: 0.02em;
 }
-.logo-dot { color: var(--accent-pink); }
+.logo-dot { color: var(--accent-sky); }
 .nav { display: flex; gap: clamp(14px, 3vw, 34px); }
 .nav a {
   font-family: var(--font-display);
@@ -136,7 +136,7 @@ body {
   width: 100%;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-pink));
+  background: linear-gradient(90deg, var(--accent), var(--accent-sky));
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
@@ -194,7 +194,7 @@ body {
   color: var(--ink);
   text-decoration: none;
   padding-bottom: 6px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-pink)) no-repeat 0 100% / 100% 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-sky)) no-repeat 0 100% / 100% 2px;
   transition: background-size 0.35s ease;
 }
 .hero-cta:hover { background-size: 30% 2px; }
@@ -408,7 +408,7 @@ body.has-cursor canvas { cursor: none; }
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--accent-pink);
+  background: var(--accent-sky);
   animation: hint-drop 1.8s ease-in-out infinite;
 }
 @keyframes hint-drop {
@@ -472,7 +472,7 @@ body.has-cursor canvas { cursor: none; }
 .section-num {
   font-family: var(--font-accent);
   font-size: 0.95rem;
-  color: var(--accent-pink);
+  color: var(--accent-sky);
   letter-spacing: 0.1em;
 }
 .section-title {
@@ -566,7 +566,7 @@ body.has-cursor canvas { cursor: none; }
 }
 .history li span {
   font-family: var(--font-accent);
-  color: var(--accent-pink);
+  color: var(--accent-sky);
   flex-shrink: 0;
 }
 
