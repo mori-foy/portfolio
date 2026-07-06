@@ -419,6 +419,9 @@ body.has-cursor canvas { cursor: none; }
 /* ------------------------------------------------------------
    marquee
    ------------------------------------------------------------ */
+.marquee-wrap {
+  position: relative;
+}
 .marquee {
   overflow: hidden;
   border-top: 1px solid rgba(139, 134, 153, 0.14);
@@ -426,18 +429,20 @@ body.has-cursor canvas { cursor: none; }
   padding: 14px 0;
   background: rgba(253, 253, 253, 0.6);
 }
-.corner-runner {
-  position: fixed;
-  bottom: clamp(16px, 4vh, 32px);
-  right: clamp(16px, 5vw, 48px);
+.marquee-runner {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
   width: clamp(48px, 6vw, 72px);
   height: auto;
   image-rendering: pixelated;
   pointer-events: none;
-  z-index: 50;
+  z-index: 2;
+  animation: marquee-run 7s linear infinite;
 }
-@media (max-width: 520px) {
-  .corner-runner { display: none; }
+@keyframes marquee-run {
+  from { left: 100%; }
+  to { left: -80px; }
 }
 .marquee-track {
   display: flex;
