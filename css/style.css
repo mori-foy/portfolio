@@ -432,17 +432,12 @@ body.has-cursor canvas { cursor: none; }
 .marquee-runner {
   position: absolute;
   bottom: 100%;
-  left: 100%;
+  right: clamp(20px, 8vw, 90px);
   width: clamp(48px, 6vw, 72px);
   height: auto;
   image-rendering: pixelated;
   pointer-events: none;
   z-index: 2;
-  animation: marquee-run 7s linear infinite;
-}
-@keyframes marquee-run {
-  from { left: 100%; }
-  to { left: -80px; }
 }
 .marquee-track {
   display: flex;
