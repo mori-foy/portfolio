@@ -695,18 +695,12 @@ body.hero-in .line-inner { transform: translateY(0); }
   width: min(260px, 46vw);
   height: auto;
 }
-.project-card h3 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.05rem;
-  margin-top: 20px;
-}
 .project-desc {
   font-size: 0.85rem;
   line-height: 1.8;
   color: var(--ink-soft);
   text-align: center;
-  margin-top: 10px;
+  margin-top: 24px;
 }
 .project-tags {
   display: flex;
