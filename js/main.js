@@ -588,4 +588,15 @@ void main(){
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  /* ---------- marquee: pixel-exact loop distance (avoids drift/jump) ---------- */
+  const marqueeTrack = document.querySelector(".marquee-track");
+  if (marqueeTrack) {
+    const syncMarqueeShift = () => {
+      const first = marqueeTrack.querySelector("span");
+      if (first) marqueeTrack.style.setProperty("--marquee-shift", `${first.getBoundingClientRect().width}px`);
+    };
+    syncMarqueeShift();
+    window.addEventListener("resize", syncMarqueeShift);
+  }
 })();
