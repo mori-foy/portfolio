@@ -758,8 +758,10 @@ body.hero-in .line-inner { transform: translateY(0); }
 @media (max-width: 520px) {
   .hero-cards { transform: scale(0.45); transform-origin: top right; right: 4px; }
   .hero-meta { display: none; }
+  .scroll-hint { display: none; }
 }
 @media (max-width: 520px) {
+  html { font-size: 15px; }
   .works-grid { grid-template-columns: 1fr; }
   .work-card-featured { grid-column: span 1; grid-row: span 1; }
   .work-card-featured .work-thumb { aspect-ratio: 4 / 3; }
