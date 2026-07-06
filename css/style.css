@@ -734,6 +734,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .works-grid { grid-template-columns: 1fr; }
   .nav { gap: 12px; }
   .nav a { font-size: 0.75rem; }
+  .section-title { font-size: clamp(1.35rem, 7vw, 1.7rem); }
 }
 
 /* reduced motion */

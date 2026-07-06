@@ -528,6 +528,15 @@ void main(){
       blobs.forEach((b) => {
         b.style.transform = `translateY(${y * parseFloat(b.dataset.speed || 0.15)}px)`;
       });
+      // safety net: a fast flick-scroll or an instant anchor jump (reduced-motion)
+      // can skip an element's viewport crossing between two frames, so the
+      // IntersectionObserver never fires and it stays permanently hidden.
+      document.querySelectorAll(".reveal:not(.in), [data-split]:not(.split-in)").forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add(el.hasAttribute("data-split") ? "split-in" : "in");
+          io.unobserve(el);
+        }
+      });
       ticking = false;
     });
   }
