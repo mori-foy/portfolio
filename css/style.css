@@ -505,13 +505,13 @@ body.hero-in .line-inner { transform: translateY(0); }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.78rem;
-  letter-spacing: 0.01em;
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0;
   box-shadow: 0 8px 18px rgba(74, 70, 85, 0.14);
   transition: transform 0.2s ease;
 }
@@ -519,7 +519,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-ai { background: #330000; color: #ff9a00; }
 .tool-ps { background: #001e36; color: #31a8ff; }
 .tool-pr { background: #00005b; color: #9999ff; }
-.tool-ae { background: #180a2e; color: #cf9dff; }
+.tool-ae { background: #00005b; color: #9999ff; }
 .tool-figma { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .skill-tags {
   list-style: none;
