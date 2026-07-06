@@ -428,6 +428,8 @@ body.has-cursor canvas { cursor: none; }
   border-bottom: 1px solid rgba(139, 134, 153, 0.14);
   padding: 14px 0;
   background: rgba(253, 253, 253, 0.6);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 .marquee-runner {
   position: absolute;
