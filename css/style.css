@@ -451,8 +451,8 @@ body.has-cursor canvas { cursor: none; }
   -webkit-text-stroke: 1px var(--ink-soft);
 }
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 
 /* ------------------------------------------------------------
