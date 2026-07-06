@@ -401,6 +401,19 @@ body.has-cursor canvas { cursor: none; }
   position: relative;
   overflow: hidden;
 }
+.hero-gif {
+  position: absolute;
+  bottom: clamp(20px, 6vh, 48px);
+  right: clamp(20px, 7vw, 90px);
+  z-index: 2;
+  width: clamp(64px, 8vw, 96px);
+  height: auto;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+@media (max-width: 520px) {
+  .hero-gif { display: none; }
+}
 .scroll-hint i::after {
   content: "";
   position: absolute;
