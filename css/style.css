@@ -401,19 +401,6 @@ body.has-cursor canvas { cursor: none; }
   position: relative;
   overflow: hidden;
 }
-.hero-gif {
-  position: absolute;
-  bottom: clamp(20px, 6vh, 48px);
-  right: clamp(20px, 7vw, 90px);
-  z-index: 2;
-  width: clamp(64px, 8vw, 96px);
-  height: auto;
-  image-rendering: pixelated;
-  pointer-events: none;
-}
-@media (max-width: 520px) {
-  .hero-gif { display: none; }
-}
 .scroll-hint i::after {
   content: "";
   position: absolute;
@@ -433,11 +420,28 @@ body.has-cursor canvas { cursor: none; }
    marquee
    ------------------------------------------------------------ */
 .marquee {
+  position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(139, 134, 153, 0.14);
   border-bottom: 1px solid rgba(139, 134, 153, 0.14);
   padding: 14px 0;
   background: rgba(253, 253, 253, 0.6);
+}
+.marquee-runner {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: clamp(48px, 6vw, 72px);
+  height: auto;
+  transform: translateY(-58%);
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 2;
+  animation: marquee-run 7s linear infinite;
+}
+@keyframes marquee-run {
+  from { left: 100%; }
+  to { left: -80px; }
 }
 .marquee-track {
   display: flex;
