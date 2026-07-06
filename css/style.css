@@ -761,7 +761,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .hero-meta { display: none; }
   .scroll-hint { display: none; }
   .marquee { padding: 6px 0; }
-  .marquee-track { font-size: 0.85rem; }
+  .marquee-track { font-size: 0.65rem; letter-spacing: 0.18em; }
 }
 @media (max-width: 520px) {
   html { font-size: 15px; }
