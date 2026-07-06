@@ -701,11 +701,41 @@ body.hero-in .line-inner { transform: translateY(0); }
   font-size: 1.05rem;
   margin-top: 20px;
 }
-.project-card p {
-  font-size: 0.8rem;
+.project-desc {
+  font-size: 0.85rem;
+  line-height: 1.8;
   color: var(--ink-soft);
-  margin-top: 4px;
+  text-align: center;
+  margin-top: 10px;
 }
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.project-tags span {
+  font-size: 0.72rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(207, 228, 245, 0.55), rgba(245, 211, 231, 0.55));
+  border: 1px solid rgba(139, 134, 153, 0.12);
+  color: var(--ink-soft);
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+.project-arrow { transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1.4); }
+.project-card:hover .project-arrow { transform: translate(4px, -2px); }
 
 /* ------------------------------------------------------------
    contact
