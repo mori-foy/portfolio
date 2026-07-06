@@ -579,7 +579,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .history li span {
   font-family: var(--font-accent);
-  color: var(--accent-sky);
+  color: var(--accent);
   flex-shrink: 0;
   width: 8.6em;
   white-space: nowrap;
