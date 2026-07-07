@@ -31,7 +31,6 @@
   <nav class="nav">
     <a href="#about">About</a>
     <a href="#works">Works</a>
-    <a href="#playground">Playground</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -67,9 +66,9 @@
           <span class="g-arrow">↗</span>
         </span>
       </a>
-      <a class="g-card g-card-2" href="#playground" data-depth="0.55">
+      <a class="g-card g-card-2" href="#contact" data-depth="0.55">
         <span class="g-card-body">
-          <span class="g-tag">Playground</span>
+          <span class="g-tag">Contact</span>
           <span class="g-num">02</span>
           <span class="g-arrow">↗</span>
         </span>
@@ -180,16 +179,25 @@
             data-url がある場合のみ詳細に「サイトを見る」ボタンが出ます ▼▼ -->
     <div class="works-grid">
       <button type="button" class="work-card work-card-featured reveal"
+        data-title="川柳なう。" data-meta="Web App / 2026"
+        data-desc="即興で句を詠み、友達と共有するSNS。写真ではなく言葉で、今日の気分をひと句に込めて。"
+        data-tags="Next.js,Firebase,Vercel"
+        data-url="https://senryunow.vercel.app">
+        <div class="work-thumb thumb-logo">
+          <span class="featured-badge">Pickup</span>
+          <img src="assets/logo_senryunow.png" alt="川柳なう。ロゴ" loading="lazy" />
+        </div>
+        <h3>川柳なう。</h3>
+        <p>Web App / 2026</p>
+      </button>
+      <button type="button" class="work-card reveal delay-1"
         data-title="Project 01" data-meta="Graphic / 2026"
         data-desc="現在制作中です。公開までもうしばらくお待ちください。">
-        <div class="work-thumb thumb-1">
-          <span class="featured-badge">Pickup</span>
-          <span class="thumb-label">COMING SOON</span>
-        </div>
+        <div class="work-thumb thumb-1"><span class="thumb-label">COMING SOON</span></div>
         <h3>Project 01</h3>
         <p>Graphic / 2026</p>
       </button>
-      <button type="button" class="work-card reveal delay-1"
+      <button type="button" class="work-card reveal delay-2"
         data-title="Project 02" data-meta="Illustration / 2026"
         data-desc="現在制作中です。公開までもうしばらくお待ちください。">
         <div class="work-thumb thumb-2"><span class="thumb-label">COMING SOON</span></div>
@@ -227,37 +235,6 @@
     </div>
   </section>
 
-  <!-- ============ PLAYGROUND ============ -->
-  <section class="section section-playground" id="playground">
-    <div class="section-head reveal">
-      <span class="section-num">03</span>
-      <h2 class="section-title" data-split>PLAYGROUND</h2>
-    </div>
-
-    <!-- ▼▼ 遊び心のあるミニプロジェクトを追加する場所 ▼▼ -->
-    <div class="playground-project reveal delay-1">
-      <button type="button" class="project-card"
-        data-title="川柳なう。" data-meta="Web App / 2026"
-        data-desc="即興で句を詠み、友達と共有するSNS。写真ではなく言葉で、今日の気分をひと句に込めて。"
-        data-tags="Next.js,Firebase,Vercel"
-        data-url="https://senryunow.vercel.app">
-        <div class="project-logo">
-          <img src="assets/logo_senryunow.png" alt="川柳なう。ロゴ" loading="lazy" />
-        </div>
-        <p class="project-desc">
-          即興で句を詠み、友達と共有するSNS。<br />
-          写真ではなく言葉で、今日の気分をひと句に込めて。
-        </p>
-        <div class="project-tags">
-          <span>Next.js</span>
-          <span>Firebase</span>
-          <span>Vercel</span>
-        </div>
-        <span class="project-link">詳細を見る <span class="project-arrow">→</span></span>
-      </button>
-    </div>
-  </section>
-
   <!-- ============ WORK DETAIL MODAL ============ -->
   <div class="work-modal" id="workModal" aria-hidden="true">
     <div class="work-modal-backdrop" data-close></div>
@@ -276,7 +253,7 @@
   <!-- ============ CONTACT ============ -->
   <section class="section" id="contact">
     <div class="section-head reveal">
-      <span class="section-num">04</span>
+      <span class="section-num">03</span>
       <h2 class="section-title" data-split>CONTACT</h2>
     </div>
 

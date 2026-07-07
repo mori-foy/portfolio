@@ -685,76 +685,18 @@ body.hero-in .line-inner { transform: translateY(0); }
 .thumb-4 { background: linear-gradient(135deg, var(--pastel-lemon), var(--pastel-mint)); }
 .thumb-5 { background: linear-gradient(135deg, var(--pastel-lavender), var(--pastel-pink)); }
 .thumb-6 { background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)); }
+.thumb-logo {
+  background: var(--white);
+  padding: clamp(20px, 6vw, 48px);
+}
+.thumb-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-/* ------------------------------------------------------------
-   playground
-   ------------------------------------------------------------ */
-.section-playground { text-align: center; }
-.section-playground .section-head { justify-content: center; }
-
-.playground-project {
-  display: flex;
-  justify-content: center;
-  margin-top: 70px;
-}
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: inherit;
-  text-decoration: none;
-  color: var(--ink);
-  background: rgba(253, 253, 253, 0.85);
-  border: 1px solid rgba(139, 134, 153, 0.14);
-  border-radius: var(--radius);
-  padding: clamp(28px, 5vw, 44px) clamp(36px, 8vw, 64px);
-  box-shadow: 0 24px 60px rgba(157, 184, 232, 0.25);
-  cursor: pointer;
-  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1.2), box-shadow 0.35s ease;
-}
-.project-card:hover {
-  transform: translateY(-6px) rotate(-0.6deg);
-  box-shadow: 0 34px 70px rgba(232, 168, 204, 0.3);
-}
-.project-logo img {
-  width: min(260px, 46vw);
-  height: auto;
-}
-.project-desc {
-  font-size: 0.85rem;
-  line-height: 1.8;
-  color: var(--ink-soft);
-  text-align: center;
-  margin-top: 20px;
-}
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 16px;
-}
-.project-tags span {
-  font-size: 0.72rem;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: linear-gradient(120deg, rgba(207, 228, 245, 0.55), rgba(245, 211, 231, 0.55));
-  border: 1px solid rgba(139, 134, 153, 0.12);
-  color: var(--ink-soft);
-}
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 22px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  color: var(--ink);
-}
 .project-arrow { transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1.4); }
-.project-card:hover .project-arrow { transform: translate(4px, -2px); }
+.work-modal-link:hover .project-arrow { transform: translate(4px, -2px); }
 
 /* ------------------------------------------------------------
    work detail modal

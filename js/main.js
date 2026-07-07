@@ -283,7 +283,7 @@ void main(){
       if (lastFocused) lastFocused.focus();
     }
 
-    document.querySelectorAll(".work-card, .project-card").forEach((card) => {
+    document.querySelectorAll(".work-card").forEach((card) => {
       card.addEventListener("click", () => openWorkModal(card));
     });
     workModal.querySelectorAll("[data-close]").forEach((el) => {
