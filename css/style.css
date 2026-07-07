@@ -708,6 +708,13 @@ body.hero-in .line-inner { transform: translateY(0); }
   width: min(260px, 46vw);
   height: auto;
 }
+.project-desc {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 20px;
+}
 .project-tags {
   display: flex;
   flex-wrap: wrap;
