@@ -462,8 +462,8 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .about-photo {
   position: relative;
-  width: clamp(180px, 24vw, 260px);
-  aspect-ratio: 3 / 4;
+  width: clamp(240px, 32vw, 340px);
+  aspect-ratio: 4 / 3;
   border-radius: 18px;
   overflow: hidden;
   margin: 0 0 28px;
@@ -916,7 +916,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .scroll-hint { display: none; }
   .marquee { padding: 6px 0; }
   .marquee-track { font-size: 0.65rem; letter-spacing: 0.18em; }
-  .about-photo { width: 240px; aspect-ratio: 4 / 3; margin: 0 auto 24px; }
+  .about-photo { width: 240px; margin: 0 auto 24px; }
   .about-name { font-size: 1.4rem; margin-bottom: 12px; }
   .about-name-en { font-size: 0.75rem; }
   .about-affiliation { font-size: 0.8rem; line-height: 1.7; }
