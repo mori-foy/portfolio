@@ -622,6 +622,17 @@ body.hero-in .line-inner { transform: translateY(0); }
   border-radius: 999px;
   box-shadow: 0 8px 18px rgba(74, 70, 85, 0.14);
 }
+.work-card {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
 .work-card h3 {
   font-size: 0.98rem;
   font-weight: 700;
@@ -678,6 +689,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: inherit;
   text-decoration: none;
   color: var(--ink);
   background: rgba(253, 253, 253, 0.85);
@@ -685,6 +697,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   border-radius: var(--radius);
   padding: clamp(28px, 5vw, 44px) clamp(36px, 8vw, 64px);
   box-shadow: 0 24px 60px rgba(157, 184, 232, 0.25);
+  cursor: pointer;
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1.2), box-shadow 0.35s ease;
 }
 .project-card:hover {
@@ -694,13 +707,6 @@ body.hero-in .line-inner { transform: translateY(0); }
 .project-logo img {
   width: min(260px, 46vw);
   height: auto;
-}
-.project-desc {
-  font-size: 0.85rem;
-  line-height: 1.8;
-  color: var(--ink-soft);
-  text-align: center;
-  margin-top: 24px;
 }
 .project-tags {
   display: flex;
@@ -730,6 +736,113 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .project-arrow { transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1.4); }
 .project-card:hover .project-arrow { transform: translate(4px, -2px); }
+
+/* ------------------------------------------------------------
+   work detail modal
+   ------------------------------------------------------------ */
+.work-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.work-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.work-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(74, 70, 85, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.work-modal-panel {
+  position: relative;
+  width: min(440px, 100%);
+  max-height: 84vh;
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(139, 134, 153, 0.14);
+  box-shadow: 0 34px 80px rgba(74, 70, 85, 0.28);
+  padding: clamp(28px, 5vw, 40px);
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1.2);
+}
+.work-modal.is-open .work-modal-panel {
+  transform: translateY(0) scale(1);
+}
+.work-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(139, 134, 153, 0.2);
+  background: rgba(253, 253, 253, 0.9);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.work-modal-close:hover { transform: rotate(90deg); color: var(--ink); }
+.work-modal-meta {
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--accent-sky);
+  text-transform: uppercase;
+}
+.work-modal-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-top: 8px;
+  padding-right: 30px;
+}
+.work-modal-desc {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--ink-soft);
+  margin-top: 16px;
+}
+.work-modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+.work-modal-tags span {
+  font-size: 0.72rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(207, 228, 245, 0.55), rgba(245, 211, 231, 0.55));
+  border: 1px solid rgba(139, 134, 153, 0.12);
+  color: var(--ink-soft);
+}
+.work-modal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 26px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  text-decoration: none;
+  padding-bottom: 6px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-sky)) no-repeat 0 100% / 100% 2px;
+}
+.work-modal-link.is-hidden { display: none; }
 
 /* ------------------------------------------------------------
    contact

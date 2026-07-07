@@ -236,7 +236,66 @@ void main(){
   }
 
   /* ==========================================================
-     3. SCROLL EFFECTS
+     3. WORK DETAIL MODAL
+     tapping a work/project card opens a detail panel; the
+     "サイトを見る" link only shows up when data-url is set.
+     ========================================================== */
+
+  const workModal = document.getElementById("workModal");
+  if (workModal) {
+    const modalTitle = document.getElementById("workModalTitle");
+    const modalMeta = document.getElementById("workModalMeta");
+    const modalDesc = document.getElementById("workModalDesc");
+    const modalTags = document.getElementById("workModalTags");
+    const modalLink = document.getElementById("workModalLink");
+    let lastFocused = null;
+
+    function openWorkModal(card) {
+      modalTitle.textContent = card.dataset.title || "";
+      modalMeta.textContent = card.dataset.meta || "";
+      modalDesc.textContent = card.dataset.desc || "";
+
+      modalTags.innerHTML = "";
+      const tags = (card.dataset.tags || "").split(",").map((t) => t.trim()).filter(Boolean);
+      tags.forEach((tag) => {
+        const span = document.createElement("span");
+        span.textContent = tag;
+        modalTags.appendChild(span);
+      });
+
+      if (card.dataset.url) {
+        modalLink.href = card.dataset.url;
+        modalLink.classList.remove("is-hidden");
+      } else {
+        modalLink.removeAttribute("href");
+        modalLink.classList.add("is-hidden");
+      }
+
+      lastFocused = document.activeElement;
+      workModal.classList.add("is-open");
+      workModal.setAttribute("aria-hidden", "false");
+      workModal.querySelector(".work-modal-close").focus();
+    }
+
+    function closeWorkModal() {
+      workModal.classList.remove("is-open");
+      workModal.setAttribute("aria-hidden", "true");
+      if (lastFocused) lastFocused.focus();
+    }
+
+    document.querySelectorAll(".work-card, .project-card").forEach((card) => {
+      card.addEventListener("click", () => openWorkModal(card));
+    });
+    workModal.querySelectorAll("[data-close]").forEach((el) => {
+      el.addEventListener("click", closeWorkModal);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && workModal.classList.contains("is-open")) closeWorkModal();
+    });
+  }
+
+  /* ==========================================================
+     4. SCROLL EFFECTS
      ========================================================== */
 
   /* ---------- split section titles into letters ---------- */
