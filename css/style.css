@@ -462,13 +462,11 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .about-photo {
   position: relative;
-  width: clamp(150px, 26vw, 220px);
+  width: clamp(180px, 24vw, 260px);
   aspect-ratio: 3 / 4;
   border-radius: 18px;
   overflow: hidden;
-  float: left;
-  shape-outside: margin-box;
-  margin: 4px 24px 12px 0;
+  margin: 0 0 28px;
   box-shadow: 0 18px 44px rgba(157, 184, 232, 0.28);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
@@ -918,7 +916,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .scroll-hint { display: none; }
   .marquee { padding: 6px 0; }
   .marquee-track { font-size: 0.65rem; letter-spacing: 0.18em; }
-  .about-photo { float: none; width: 240px; aspect-ratio: 4 / 3; margin: 0 auto 24px; }
+  .about-photo { width: 240px; aspect-ratio: 4 / 3; margin: 0 auto 24px; }
   .about-name { font-size: 1.4rem; margin-bottom: 12px; }
   .about-name-en { font-size: 0.75rem; }
   .about-affiliation { font-size: 0.8rem; line-height: 1.7; }
