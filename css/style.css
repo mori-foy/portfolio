@@ -993,7 +993,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   margin-bottom: 64px;
   display: grid;
   place-items: center;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
 }
 .wp-hero img {
   max-width: min(420px, 70%);
@@ -1086,7 +1086,6 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 @media (max-width: 520px) {
   .wp-gallery { grid-template-columns: 1fr; }
-  .wp-hero { aspect-ratio: 4 / 3; }
 }
 
 /* reduced motion */
