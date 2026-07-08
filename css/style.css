@@ -510,7 +510,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .about-policy-img {
   display: block;
-  width: min(430px, 88%);
+  width: min(560px, 100%);
   height: auto;
   margin-top: 56px;
   /* mp4 は透過できないため、白背景を下地に溶かして黒い線だけ見せる */
@@ -882,7 +882,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .about-name { font-size: 1.4rem; margin-bottom: 12px; }
   .about-name-en { font-size: 0.75rem; }
   .about-affiliation { font-size: 0.8rem; line-height: 1.7; }
-  .about-policy-img { width: min(340px, 92%); }
+  .about-policy-img { width: 100%; }
   .history li { font-size: 0.78rem; gap: 10px; }
   .history li span { width: 7em; }
 }
