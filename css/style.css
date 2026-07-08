@@ -1187,12 +1187,34 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 
 /* 仕組みの3ステップ(テキスト) */
+.wp-pipeline-box {
+  position: relative;
+  border: 1.5px dashed var(--accent);
+  border-radius: 18px;
+  padding: 28px 20px 20px;
+  margin: 30px 0 6px;
+}
+.wp-pipeline-label {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(120deg, var(--accent), var(--accent-sky));
+  border-radius: 999px;
+  padding: 4px 18px;
+  box-shadow: 0 6px 14px rgba(157, 184, 232, 0.35);
+}
 .wp-pipeline {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  margin: 18px 0 6px;
 }
 .wp-pipeline span {
   font-size: 0.85rem;
