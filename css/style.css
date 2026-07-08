@@ -1212,7 +1212,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   margin-top: 24px;
-  align-items: end;
+  align-items: center;
 }
 .wp-flow figure { text-align: center; }
 .wp-flow img { width: 88%; height: auto; display: block; margin: 0 auto; }
