@@ -552,6 +552,18 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-pr { background: #00005b; color: #9999ff; }
 .tool-ae { background: #00005b; color: #9999ff; }
 .tool-figma { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
+.tool-claude { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
+.tool-gemini { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
+.tool-miro { background: #ffd02f; color: #050038; }
+/* project info 内はひとまわり小さく */
+.wp-tools { margin-bottom: 0; padding: 2px 0; }
+.wp-tools .tool-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 12px rgba(74, 70, 85, 0.12);
+}
 .skill-tags {
   list-style: none;
   display: flex;
