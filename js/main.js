@@ -375,4 +375,13 @@ void main(){
       aboutPhotoImgs[activeIndex].classList.add("is-active");
     }, 4000);
   }
+
+  /* ---------- about policy: slow down handwritten video ---------- */
+  const policyVideo = document.getElementById("policyVideo");
+  if (policyVideo) {
+    const setRate = () => { policyVideo.playbackRate = 0.4; };
+    setRate();
+    policyVideo.addEventListener("loadeddata", setRate);
+    policyVideo.addEventListener("play", setRate);
+  }
 })();
