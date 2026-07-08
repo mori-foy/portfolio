@@ -1164,14 +1164,16 @@ body.hero-in .line-inner { transform: translateY(0); }
   align-items: end;
 }
 .wp-flow figure { text-align: center; }
-.wp-flow img { width: 100%; height: auto; display: block; }
+.wp-flow img { width: 88%; height: auto; display: block; margin: 0 auto; }
 /* 完成フィギュアはスマホ画面と高さ感が揃うように */
-.wp-flow .wp-flow-fig img { width: 86%; margin: 0 auto; }
+.wp-flow .wp-flow-fig img { width: 76%; }
 .wp-flow figcaption {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--ink);
-  margin-top: 6px;
+  margin-top: 8px;
   line-height: 1.6;
+  /* 2行になるキャプションがあっても画像の下端が揃うように高さを確保 */
+  min-height: 2.6em;
 }
 .wp-flow .wp-flow-num {
   display: inline-grid;
