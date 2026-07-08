@@ -1116,7 +1116,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   margin-top: 24px;
 }
 .wp-tl-step {
-  background: rgba(245, 211, 231, 0.4);
+  background: rgba(245, 199, 150, 0.4);
   padding: 16px 26px 16px 30px;
   /* 右端が突き出て左端がへこむ矢羽根型 */
   clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%, 16px 50%);
@@ -1126,10 +1126,10 @@ body.hero-in .line-inner { transform: translateY(0); }
   clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
   padding-left: 20px;
 }
-/* 同系色のまま右へ進むほど少しずつ濃く(青ではなくピンク系) */
-.wp-tl-step:nth-child(2) { background: rgba(245, 211, 231, 0.55); }
-.wp-tl-step:nth-child(3) { background: rgba(245, 211, 231, 0.7); }
-.wp-tl-step:nth-child(4) { background: rgba(245, 211, 231, 0.85); }
+/* 同系色のまま右へ進むほど少しずつ濃く(オレンジ系) */
+.wp-tl-step:nth-child(2) { background: rgba(245, 199, 150, 0.55); }
+.wp-tl-step:nth-child(3) { background: rgba(245, 199, 150, 0.7); }
+.wp-tl-step:nth-child(4) { background: rgba(245, 199, 150, 0.85); }
 .wp-tl-week {
   font-family: var(--font-accent);
   font-weight: 700;
@@ -1537,7 +1537,7 @@ body.hero-in .line-inner { transform: translateY(0); }
     transform: translateX(-50%);
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
-    border-top: 11px solid #d987ae;
+    border-top: 11px solid #d9924f;
   }
 
   /* アプリ画面フローは横スワイプのスライダーに(1→5と順に見られる) */
