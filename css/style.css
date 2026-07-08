@@ -1007,34 +1007,20 @@ body.hero-in .line-inner { transform: translateY(0); }
   max-height: none;
   object-fit: cover;
 }
-.wp-section { margin-bottom: 72px; }
+.wp-section { margin-bottom: 56px; }
 .wp-section h2 {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(1.3rem, 3.2vw, 1.7rem);
-  line-height: 1.4;
+  font-weight: 700;
+  font-size: 1.15rem;
   color: var(--ink);
-  margin-bottom: 24px;
-  padding-bottom: 12px;
+  margin-bottom: 16px;
   display: flex;
   align-items: baseline;
-  gap: 14px;
-  position: relative;
-}
-.wp-section h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 64px;
-  height: 4px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-sky), var(--pastel-pink));
+  gap: 12px;
 }
 .wp-section-num {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: var(--accent);
-  flex-shrink: 0;
 }
 .wp-section p {
   font-size: 0.95rem;
