@@ -1436,6 +1436,31 @@ body.hero-in .line-inner { transform: translateY(0); }
   text-align: center;
   margin-top: 70px;
 }
+.wp-back-bottom-wrap {
+  text-align: center;
+  margin-top: 70px;
+}
+.wp-back-bottom {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 999px;
+  border: 1.5px solid var(--accent);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.wp-back-bottom:hover {
+  background: linear-gradient(120deg, var(--accent), var(--accent-sky));
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(157, 184, 232, 0.35);
+}
 /* 詳細ページ: タブレット幅 */
 @media (max-width: 768px) {
   .wp-flow { grid-template-columns: repeat(3, 1fr); }
@@ -1520,18 +1545,26 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-info > div { flex-direction: column; gap: 2px; }
   .wp-info dt { width: auto; }
 
-  .wp-ui { gap: 30px; }
-  .wp-ui-row { grid-template-columns: 1fr; gap: 14px; }
-  .wp-ui-row-rev { grid-template-columns: 1fr; }
+  /* UIのこだわり: 画像は小さく左に固定し、説明カードと横並びで
+     対応関係を分かりやすく保ったまま省スペース化する */
+  .wp-ui { gap: 24px; }
+  .wp-ui-row,
+  .wp-ui-row-rev {
+    grid-template-columns: minmax(0, 84px) 1fr;
+    gap: 12px;
+    align-items: start;
+  }
   .wp-ui-row-rev .wp-ui-shot { order: 0; }
-  /* PCと同様、画像は控えめなサイズに */
-  .wp-ui-shot { max-width: min(200px, 56%); margin: 0 auto; width: 100%; }
-  /* 縦積みでは線の座標が合わないため非表示(丸マーカーの色対応で代替) */
+  .wp-ui-shot { max-width: none; width: 100%; margin: 0; }
+  .wp-ui-marker { width: 8px; height: 8px; box-shadow: 0 0 0 3px rgba(157, 184, 232, 0.3); }
+  .wp-ui-marker-b { box-shadow: 0 0 0 3px rgba(111, 203, 224, 0.3); }
+  /* 縦横比が変わるため線は非表示のまま(丸マーカーの色対応で代替) */
   .wp-ui-lines { display: none; }
-  .wp-ui-callouts { gap: 10px; }
-  .wp-ui-callout { padding: 12px 14px; }
-  .wp-ui-callout h4 { font-size: 0.86rem; }
-  .wp-ui-callout p { font-size: 0.8rem; line-height: 1.75; }
+  .wp-ui-callouts { gap: 8px; }
+  .wp-ui-callout { padding: 10px 12px; }
+  .wp-ui-callout h4 { font-size: 0.8rem; margin-bottom: 3px; }
+  .wp-ui-callout h4::before { width: 7px; height: 7px; }
+  .wp-ui-callout p { font-size: 0.74rem; line-height: 1.65; }
 
   .wp-hero { margin-bottom: 44px; }
   .wp-section { margin-bottom: 48px; }
