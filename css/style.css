@@ -1329,6 +1329,10 @@ body.hero-in .line-inner { transform: translateY(0); }
   margin-bottom: 14px;
 }
 .wp-origin-img-illust {
+  aspect-ratio: auto;
+  width: 55%;
+  max-width: 220px;
+  margin: 0 auto 14px;
   object-fit: contain;
   background: #fff;
   padding: 10px;
@@ -1359,6 +1363,48 @@ body.hero-in .line-inner { transform: translateY(0); }
   color: var(--accent);
   font-weight: 400;
 }
+
+/* 5段階ランクの棒グラフ */
+.wp-rank-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 22px);
+  height: 160px;
+  margin-top: 24px;
+  padding: 0 10px;
+}
+.wp-rank-bar {
+  flex: 1;
+  max-width: 90px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.wp-rank-fill {
+  width: 100%;
+  height: var(--rank-h);
+  border-radius: 8px 8px 3px 3px;
+  box-shadow: 0 6px 14px rgba(74, 70, 85, 0.14);
+}
+.wp-rank-bar em {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+.wp-rank-1 { background: #b7b3c2; }
+.wp-rank-2 { background: #4fb8ac; }
+.wp-rank-3 { background: #6f9fe0; }
+.wp-rank-4 { background: #9c7fd4; }
+.wp-rank-5 { background: linear-gradient(180deg, #f3cf6a, #d9a934); }
 
 /* 小見出し */
 .wp-subhead {
