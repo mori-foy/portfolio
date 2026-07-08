@@ -1424,16 +1424,60 @@ body.hero-in .line-inner { transform: translateY(0); }
   text-align: center;
   margin-top: 70px;
 }
+/* 詳細ページ: タブレット幅 */
+@media (max-width: 768px) {
+  .wp-flow { grid-template-columns: repeat(3, 1fr); }
+  .wp-timeline { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
+
+/* 詳細ページ: スマホ幅 */
 @media (max-width: 520px) {
   .wp-gallery { grid-template-columns: 1fr; }
-  .wp-cards3 { grid-template-columns: 1fr; }
-  .wp-timeline { grid-template-columns: repeat(2, 1fr); }
-  .wp-flow { grid-template-columns: repeat(2, 1fr); }
+  .wp-cards3 { grid-template-columns: 1fr; gap: 12px; }
+  .wp-cards3 > div { padding: 16px; }
+  .wp-cards3 p br { display: none; }
+
+  /* who/why/how は折り返し許可で中央に */
+  .wp-hiw > div { flex-wrap: wrap; justify-content: center; row-gap: 6px; }
+  .wp-hiw-text { font-size: 0.85rem; padding: 5px 14px; text-align: center; }
+
+  /* タイムラインは縦1列のカードに(矢羽根は解除) */
+  .wp-timeline { grid-template-columns: 1fr; gap: 10px; }
+  .wp-tl-step,
+  .wp-tl-step:first-child {
+    clip-path: none;
+    border-radius: 14px;
+    padding: 14px 18px;
+  }
+
+  /* アプリ画面フローは2列 */
+  .wp-flow { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .wp-flow figcaption { min-height: 0; }
+
+  /* パイプラインは縦並びに */
+  .wp-pipeline { flex-direction: column; gap: 6px; }
+  .wp-pipeline em { transform: rotate(90deg); }
+  .wp-pipeline span { width: 100%; max-width: 260px; text-align: center; }
+
+  /* 比較表はコンパクトに */
+  .wp-table { font-size: 0.78rem; }
+  .wp-table th, .wp-table td { padding: 9px 8px; }
+
+  /* project info はラベルを上に積む */
+  .wp-info > div { flex-direction: column; gap: 2px; }
+  .wp-info dt { width: auto; }
+
+  .wp-ui { gap: 32px; }
   .wp-ui-row { grid-template-columns: 1fr; }
+  .wp-ui-row-rev { grid-template-columns: 1fr; }
   .wp-ui-row-rev .wp-ui-shot { order: 0; }
   .wp-ui-shot { max-width: 240px; margin: 0 auto; width: 100%; }
   /* 縦積みでは線の座標が合わないため非表示(丸は残す) */
   .wp-ui-lines { display: none; }
+
+  .wp-hero { margin-bottom: 44px; }
+  .wp-section { margin-bottom: 48px; }
+  .wp-section p { font-size: 0.9rem; }
 }
 
 /* reduced motion */
