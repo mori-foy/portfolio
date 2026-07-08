@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>うちの子製作所 — Minami Morikawa</title>
+<meta name="description" content="画像1枚でなんでもフィギュア化できるプラットフォーム「うちの子製作所」の制作事例" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<!-- scroll progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- floating pastel blobs (parallax) -->
+<div class="blobs" aria-hidden="true">
+  <div class="blob blob-a" data-speed="0.15"></div>
+  <div class="blob blob-c" data-speed="0.10"></div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../index.html">P<span class="logo-dot">.</span></a>
+  <nav class="nav">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#works">Projects</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <article class="wp">
+
+    <a class="wp-back reveal" href="../index.html#works">← Projects に戻る</a>
+
+    <!-- ▼▼ タイトルまわり ▼▼ -->
+    <header class="wp-head">
+      <p class="wp-meta reveal">Web App / 2026</p>
+      <h1 class="wp-title reveal" data-split>うちの子製作所</h1>
+      <p class="wp-sub reveal delay-1">画像1枚でなんでもフィギュア化できるプラットフォーム</p>
+    </header>
+
+    <!-- ▼▼ メインビジュアル ▼▼ -->
+    <div class="wp-hero wp-hero-photo reveal">
+      <img src="../assets/card_uchinoko.jpg" alt="うちの子製作所のメインビジュアル" />
+    </div>
+
+    <!-- ▼▼ どんなサービスか ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">01</span>Overview — どんなサービス?</h2>
+      <p>
+        「うちの子製作所」は、画像1枚から3Dモデルを生成し、
+        フィギュアとして手元に迎えられるプラットフォームです。
+        お気に入りのイラストや写真をアップロードするだけで「うちの子」が立体になり、
+        3Dビューアでくるくる回して眺めたり、3Dプリント用にダウンロードしたりできます。
+      </p>
+      <p>(サービスの背景や対象ユーザーなど、補足があればここに書いてください)</p>
+    </section>
+
+    <!-- ▼▼ こだわり・工夫した点 ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">02</span>Design — こだわったところ</h2>
+      <p>(デザイン面・実装面で工夫した点をここに書いてください)</p>
+    </section>
+
+    <!-- ▼▼ スクリーンショット(4:3推奨、何枚でも) ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">03</span>Screenshots</h2>
+      <div class="wp-gallery">
+        <figure class="wp-shot wp-shot-empty"><span>COMING SOON</span></figure>
+        <figure class="wp-shot wp-shot-empty"><span>COMING SOON</span></figure>
+        <!-- 画像を入れるときはこの形式で:
+        <figure class="wp-shot"><img src="../assets/uchinoko-1.jpg" alt="3Dビューア画面" /><figcaption>3Dビューア画面</figcaption></figure>
+        -->
+      </div>
+    </section>
+
+    <!-- ▼▼ 担当・期間・ツール ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">04</span>Project Info</h2>
+      <dl class="wp-info">
+        <div><dt>担当</dt><dd>(担当した役割を書いてください)</dd></div>
+        <div><dt>期間</dt><dd>2026</dd></div>
+        <div><dt>ツール</dt><dd>(使用ツール・技術を書いてください)</dd></div>
+      </dl>
+    </section>
+
+    <!-- サイト公開URLが決まったらここに「サイトを見る」ボタンを追加:
+    <div class="wp-cta reveal">
+      <a class="work-modal-link" href="https://..." target="_blank" rel="noopener noreferrer">
+        サイトを見る <span class="project-arrow">→</span>
+      </a>
+    </div>
+    -->
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Minami Morikawa — made with soft colors</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
