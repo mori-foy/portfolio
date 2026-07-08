@@ -1233,6 +1233,25 @@ body.hero-in .line-inner { transform: translateY(0); }
   font-weight: 700;
 }
 
+/* 小見出し */
+.wp-subhead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 36px 0 10px;
+}
+.wp-subhead::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-sky));
+  flex-shrink: 0;
+}
+
 /* 比較表 */
 .wp-table {
   width: 100%;
