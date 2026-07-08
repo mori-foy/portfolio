@@ -284,7 +284,14 @@ void main(){
     }
 
     document.querySelectorAll(".work-card").forEach((card) => {
-      card.addEventListener("click", () => openWorkModal(card));
+      card.addEventListener("click", () => {
+        // data-page があるカードは専用の詳細ページへ、無ければ簡易モーダル
+        if (card.dataset.page) {
+          window.location.href = card.dataset.page;
+          return;
+        }
+        openWorkModal(card);
+      });
     });
     workModal.querySelectorAll("[data-close]").forEach((el) => {
       el.addEventListener("click", closeWorkModal);

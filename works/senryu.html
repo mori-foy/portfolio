@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>川柳なう。 — Minami Morikawa</title>
+<meta name="description" content="即興で句を詠み、友達と共有するSNS「川柳なう。」の制作事例" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<!-- scroll progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- floating pastel blobs (parallax) -->
+<div class="blobs" aria-hidden="true">
+  <div class="blob blob-a" data-speed="0.15"></div>
+  <div class="blob blob-c" data-speed="0.10"></div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../index.html">P<span class="logo-dot">.</span></a>
+  <nav class="nav">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#works">Projects</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <article class="wp">
+
+    <a class="wp-back reveal" href="../index.html#works">← Projects に戻る</a>
+
+    <!-- ▼▼ タイトルまわり ▼▼ -->
+    <header class="wp-head">
+      <p class="wp-meta reveal">Web App / 2026</p>
+      <h1 class="wp-title reveal" data-split>川柳なう。</h1>
+      <p class="wp-sub reveal delay-1">気分をひと句に。言葉でつぶやくSNS</p>
+      <div class="wp-tags reveal delay-1">
+        <span>Next.js</span><span>Firebase</span><span>Vercel</span>
+      </div>
+    </header>
+
+    <!-- ▼▼ メインビジュアル(4:3〜16:9くらいの画像を推奨) ▼▼ -->
+    <div class="wp-hero reveal">
+      <img src="../assets/logo_senryunow.png" alt="川柳なう。のロゴ" />
+    </div>
+
+    <!-- ▼▼ どんなサービスか ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">01</span>Overview — どんなサービス?</h2>
+      <p>
+        「川柳なう。」は、いま感じたことを五・七・五のひと句にして投稿するSNSです。
+        写真や長文ではなく、17音という制約のなかで気分を表現することで、
+        飾らない・盛らない、ゆるやかなコミュニケーションが生まれます。
+      </p>
+      <p>
+        タイムラインには友達の「今日の一句」が流れ、
+        気に入った句にはリアクションで返せます。
+      </p>
+    </section>
+
+    <!-- ▼▼ こだわり・工夫した点 ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">02</span>Design — こだわったところ</h2>
+      <p>
+        言葉が主役のサービスなので、UIは余白と文字組みを最優先に設計しました。
+        (ここに、デザイン面・実装面で工夫した点を書いてください)
+      </p>
+    </section>
+
+    <!-- ▼▼ スクリーンショット(4:3推奨、何枚でも) ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">03</span>Screenshots</h2>
+      <div class="wp-gallery">
+        <figure class="wp-shot wp-shot-empty"><span>COMING SOON</span></figure>
+        <figure class="wp-shot wp-shot-empty"><span>COMING SOON</span></figure>
+        <!-- 画像を入れるときはこの形式で:
+        <figure class="wp-shot"><img src="../assets/senryu-1.jpg" alt="投稿画面" /><figcaption>投稿画面</figcaption></figure>
+        -->
+      </div>
+    </section>
+
+    <!-- ▼▼ 担当・期間・ツール ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">04</span>Project Info</h2>
+      <dl class="wp-info">
+        <div><dt>担当</dt><dd>企画・UIデザイン・実装(個人開発)</dd></div>
+        <div><dt>期間</dt><dd>2026</dd></div>
+        <div><dt>ツール</dt><dd>Next.js / Firebase / Vercel</dd></div>
+      </dl>
+    </section>
+
+    <div class="wp-cta reveal">
+      <a class="work-modal-link" href="https://senryunow.vercel.app" target="_blank" rel="noopener noreferrer">
+        サイトを見る <span class="project-arrow">→</span>
+      </a>
+    </div>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Minami Morikawa — made with soft colors</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

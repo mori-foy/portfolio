@@ -179,13 +179,15 @@
     <!-- ▼▼ 作品を追加するときはこの .work-card を複製して、
             画像を入れる場合は .work-thumb の中に <img> を置いてください(通常カードは4:3、Pickupは16:13)。
             カード下は <h3>タイトル</h3> と <p class="work-sub">サブタイトル</p> の2行。
-            data-url がある場合のみ詳細に「サイトを見る」ボタンが出ます ▼▼ -->
+            data-page="works/xxx.html" があるカードはタップで詳細ページへ飛びます(works/senryu.html がテンプレート)。
+            data-page が無いカードは簡易モーダル表示。data-url がある場合のみ「サイトを見る」ボタンが出ます ▼▼ -->
     <div class="works-grid">
       <button type="button" class="work-card work-card-featured reveal"
         data-title="川柳なう。" data-meta="Web App / 2026"
         data-desc="即興で句を詠み、友達と共有するSNS。写真ではなく言葉で、今日の気分をひと句に込めて。"
         data-tags="Next.js,Firebase,Vercel"
-        data-url="https://senryunow.vercel.app">
+        data-url="https://senryunow.vercel.app"
+        data-page="works/senryu.html">
         <div class="work-thumb thumb-logo">
           <span class="featured-badge">Pickup</span>
           <img src="assets/logo_senryunow.png" alt="川柳なう。ロゴ" loading="lazy" />
