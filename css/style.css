@@ -1475,8 +1475,24 @@ body.hero-in .line-inner { transform: translateY(0); }
     border-top: 11px solid var(--accent);
   }
 
-  /* アプリ画面フローは2列 */
-  .wp-flow { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  /* アプリ画面フローは横スワイプのスライダーに(1→5と順に見られる) */
+  .wp-flow {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    /* ページ余白まで広げて端が切れて見える=スワイプできると分かる */
+    margin-inline: -20px;
+    padding-inline: 20px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+  }
+  .wp-flow::-webkit-scrollbar { display: none; }
+  .wp-flow figure {
+    flex: 0 0 60%;
+    scroll-snap-align: center;
+  }
   .wp-flow figcaption { min-height: 0; }
 
   /* パイプラインは縦並びに */
