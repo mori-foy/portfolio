@@ -1433,8 +1433,22 @@ body.hero-in .line-inner { transform: translateY(0); }
 /* 詳細ページ: スマホ幅 */
 @media (max-width: 520px) {
   .wp-gallery { grid-template-columns: 1fr; }
-  .wp-cards3 { grid-template-columns: 1fr; gap: 12px; }
-  .wp-cards3 > div { padding: 16px; }
+  /* つくる/発信する/売る: 見出し+説明の横並び行でコンパクトに */
+  .wp-cards3 { grid-template-columns: 1fr; gap: 8px; }
+  .wp-cards3 > div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    text-align: left;
+  }
+  .wp-cards3 h3 {
+    font-size: 1rem;
+    margin: 0;
+    flex-shrink: 0;
+    width: 4.2em;
+  }
+  .wp-cards3 p { font-size: 0.78rem; }
   .wp-cards3 p br { display: none; }
 
   /* who/why/how: PCと同じく行は左揃えのまま、ブロック全体だけ中央 */
