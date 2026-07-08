@@ -555,9 +555,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-claude { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-gemini { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-miro { background: #ffdd33; }
-/* OpenAIは全製品共通の花びらロゴのみで、Codex専用ロゴは存在しないため
-   ターミナル記号でCodex(CLIツール)であることを表す */
-.tool-codex { background: #000; color: #fff; font-family: "SFMono-Regular", Consolas, monospace; font-size: 1.05rem; }
+.tool-codex { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-nextjs { background: #000; }
 .tool-firebase { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-vercel { background: #000; }
@@ -1214,6 +1212,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   margin-top: 24px;
   align-items: center;
 }
+/* 4ステップのみのフロー(川柳なう。など)は4列均等にして左寄りの空白をなくす */
+.wp-flow-4 { grid-template-columns: repeat(4, 1fr); max-width: 640px; margin-left: auto; margin-right: auto; }
 .wp-flow figure { text-align: center; }
 .wp-flow img { width: 88%; height: auto; display: block; margin: 0 auto; }
 /* 完成フィギュアはスマホ画面と高さ感が揃うように */
@@ -1374,13 +1374,13 @@ body.hero-in .line-inner { transform: translateY(0); }
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: clamp(8px, 2vw, 16px);
-  height: 160px;
+  gap: clamp(6px, 1.6vw, 12px);
+  height: 108px;
   padding: 0 10px;
 }
 .wp-rank-bar {
   flex: 1;
-  max-width: 90px;
+  max-width: 56px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1390,17 +1390,17 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-rank-fill {
   width: 100%;
   height: var(--rank-h);
-  border-radius: 8px 8px 3px 3px;
-  box-shadow: 0 6px 14px rgba(74, 70, 85, 0.14);
+  border-radius: 6px 6px 2px 2px;
+  box-shadow: 0 5px 10px rgba(74, 70, 85, 0.12);
 }
 .wp-rank-bar em {
   display: block;
   font-style: normal;
   font-family: var(--font-accent);
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   font-weight: 700;
   color: var(--ink);
-  margin-top: 8px;
+  margin-top: 6px;
   text-align: center;
   white-space: nowrap;
 }
@@ -1577,6 +1577,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   object-fit: cover;
 }
 .wp-shot-wide img { aspect-ratio: 16 / 9; }
+/* スマホ画面全体を見せたい場合は切り抜かない */
+.wp-rank-shot img { aspect-ratio: auto; object-fit: contain; }
 /* ロゴなどは切り抜かずそのまま表示 */
 .wp-shot-logo img {
   aspect-ratio: auto;
@@ -1652,6 +1654,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 /* 詳細ページ: タブレット幅 */
 @media (max-width: 768px) {
   .wp-flow { grid-template-columns: repeat(3, 1fr); }
+  .wp-flow-4 { grid-template-columns: repeat(2, 1fr); max-width: 340px; }
   .wp-timeline { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
 
@@ -1715,6 +1718,7 @@ body.hero-in .line-inner { transform: translateY(0); }
     padding-inline: 20px;
     padding-bottom: 10px;
     scrollbar-width: none;
+    max-width: none;
   }
   .wp-flow::-webkit-scrollbar { display: none; }
   .wp-flow figure {
