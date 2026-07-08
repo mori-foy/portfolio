@@ -1164,8 +1164,8 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .wp-flow figure { text-align: center; }
 .wp-flow img { width: 100%; height: auto; display: block; }
-/* 完成フィギュアはスマホ画面と高さ感が揃うよう小さめに */
-.wp-flow .wp-flow-fig img { width: 42%; margin: 0 auto; }
+/* 完成フィギュアはスマホ画面と高さ感が揃うように */
+.wp-flow .wp-flow-fig img { width: 86%; margin: 0 auto; }
 .wp-flow figcaption {
   font-size: 0.78rem;
   color: var(--ink);
