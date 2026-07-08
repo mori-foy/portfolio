@@ -555,6 +555,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-claude { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-gemini { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-miro { background: #ffdd33; }
+.tool-codex { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 /* project info 内はひとまわり小さく */
 .wp-tools { margin-bottom: 0; padding: 2px 0; }
 .wp-tools .tool-icon {
