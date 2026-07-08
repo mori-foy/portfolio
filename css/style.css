@@ -1235,6 +1235,18 @@ body.hero-in .line-inner { transform: translateY(0); }
   font-style: normal;
   color: var(--accent);
   font-weight: 700;
+  display: inline-block;
+  /* 自動で右へ流れていく様子を表現 */
+  animation: wp-pipeline-flow 1.6s ease-in-out infinite;
+}
+.wp-pipeline em:nth-of-type(2) { animation-delay: 0.3s; }
+@keyframes wp-pipeline-flow {
+  0%, 100% { transform: translateX(0); opacity: 0.55; }
+  50% { transform: translateX(4px); opacity: 1; }
+}
+@keyframes wp-pipeline-flow-vertical {
+  0%, 100% { transform: rotate(90deg) translateX(0); opacity: 0.55; }
+  50% { transform: rotate(90deg) translateX(4px); opacity: 1; }
 }
 
 /* 小見出し */
@@ -1280,8 +1292,22 @@ body.hero-in .line-inner { transform: translateY(0); }
   background: var(--accent);
   box-shadow: 0 0 0 4px rgba(157, 184, 232, 0.3);
 }
+/* 指し示している場所だと分かるよう、点の周りにゆっくり広がるリングを添える */
+.wp-ui-marker::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  animation: wp-ui-pulse 1.8s ease-out infinite;
+}
 /* 指し線が見えないスマホでも対応が分かるよう、点と説明カードを同系色でペアリング */
 .wp-ui-marker-b { background: var(--accent-sky); box-shadow: 0 0 0 4px rgba(111, 203, 224, 0.3); }
+.wp-ui-marker-b::after { border-color: var(--accent-sky); }
+@keyframes wp-ui-pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
 /* 丸から注釈カードへ伸びる線 */
 .wp-ui-lines {
   position: absolute;
@@ -1532,10 +1558,17 @@ body.hero-in .line-inner { transform: translateY(0); }
     scroll-snap-align: center;
   }
   .wp-flow figcaption { min-height: 0; }
+  /* スワイプできることが伝わるよう、表示時に一度だけ左へ軽くナッジ */
+  .wp-section.in .wp-flow { animation: wp-flow-swipe-hint 1s ease-in-out 0.4s 1 both; }
+  @keyframes wp-flow-swipe-hint {
+    0%, 100% { transform: translateX(0); }
+    35% { transform: translateX(-16px); }
+    65% { transform: translateX(4px); }
+  }
 
-  /* パイプラインは縦並びに */
+  /* パイプラインは縦並びに(矢印は90度回転させつつ流れるモーションを維持) */
   .wp-pipeline { flex-direction: column; gap: 6px; }
-  .wp-pipeline em { transform: rotate(90deg); }
+  .wp-pipeline em { animation-name: wp-pipeline-flow-vertical; }
   .wp-pipeline span { width: 100%; max-width: 260px; text-align: center; }
 
   /* 比較表はコンパクトに */
@@ -1551,7 +1584,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-ui { gap: 24px; }
   .wp-ui-row,
   .wp-ui-row-rev {
-    grid-template-columns: minmax(0, 84px) 1fr;
+    grid-template-columns: minmax(0, 108px) 1fr;
     gap: 12px;
     align-items: start;
   }
@@ -1575,6 +1608,6 @@ body.hero-in .line-inner { transform: translateY(0); }
 /* reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .grain, .marquee-track, .g-card-body { animation: none; }
+  .grain, .marquee-track, .g-card-body, .wp-pipeline em, .wp-ui-marker::after, .wp-flow { animation: none; }
   .reveal, [data-split] .ch, .line-inner { transition: none; opacity: 1; transform: none; }
 }
