@@ -1248,7 +1248,11 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-shot img {
   width: 100%;
   display: block;
+  /* 縦横比の違う写真同士でも高さが揃うように統一トリミング */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
+.wp-shot-wide img { aspect-ratio: 16 / 9; }
 .wp-shot figcaption {
   font-family: var(--font-accent);
   font-size: 0.75rem;
