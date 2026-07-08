@@ -926,8 +926,10 @@ body.hero-in .line-inner { transform: translateY(0); }
   /* スマホ: 絵柄がやや下寄りなので、下側を多めに見せて視覚的に中央へ */
   .work-card-featured .work-thumb img { object-position: center center; }
   .work-card-featured h3 { font-size: 1.1rem; }
-  .work-card h3 { font-size: 0.82rem; margin-top: 8px; }
-  .work-card p { font-size: 0.7rem; }
+  /* タイトル/サブタイトルの行数差でカードの見た目の高さがバラつかないよう
+     2行分の高さを確保して隣同士の段を揃える */
+  .work-card h3 { font-size: 0.82rem; margin-top: 8px; line-height: 1.4; min-height: 2.8em; }
+  .work-card p { font-size: 0.7rem; line-height: 1.5; min-height: 2.25em; }
   .nav { gap: 12px; }
   .nav a { font-size: 0.75rem; }
   .section-title { font-size: clamp(1.35rem, 7vw, 1.7rem); }
