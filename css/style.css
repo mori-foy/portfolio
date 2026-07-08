@@ -1252,6 +1252,55 @@ body.hero-in .line-inner { transform: translateY(0); }
   flex-shrink: 0;
 }
 
+/* UIのこだわり(スクショ+注釈カード) */
+.wp-ui {
+  display: grid;
+  gap: 44px;
+  margin-top: 20px;
+}
+.wp-ui-row {
+  display: grid;
+  grid-template-columns: minmax(0, 230px) 1fr;
+  gap: clamp(18px, 4vw, 40px);
+  align-items: center;
+}
+.wp-ui-row-rev .wp-ui-shot { order: 2; }
+.wp-ui-shot img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 16px 28px rgba(74, 70, 85, 0.18));
+}
+.wp-ui-callouts { display: grid; gap: 14px; }
+.wp-ui-callout {
+  border: 1.5px solid var(--accent);
+  border-radius: 14px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.75);
+}
+.wp-ui-callout h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+.wp-ui-callout h4::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-sky));
+  flex-shrink: 0;
+}
+.wp-ui-callout p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.9;
+}
+
 /* 比較表 */
 .wp-table {
   width: 100%;
@@ -1357,6 +1406,9 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-cards3 { grid-template-columns: 1fr; }
   .wp-timeline { grid-template-columns: repeat(2, 1fr); }
   .wp-flow { grid-template-columns: repeat(2, 1fr); }
+  .wp-ui-row { grid-template-columns: 1fr; }
+  .wp-ui-row-rev .wp-ui-shot { order: 0; }
+  .wp-ui-shot { max-width: 240px; margin: 0 auto; width: 100%; }
 }
 
 /* reduced motion */
