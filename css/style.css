@@ -1012,15 +1012,19 @@ body.hero-in .line-inner { transform: translateY(0); }
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.15rem;
-  color: var(--ink);
-  margin-bottom: 16px;
-  display: flex;
+  color: #fff;
+  margin-bottom: 20px;
+  display: inline-flex;
   align-items: baseline;
   gap: 12px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-sky));
+  padding: 8px 22px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(157, 184, 232, 0.35);
 }
 .wp-section-num {
   font-size: 0.8rem;
-  color: var(--accent);
+  color: rgba(255, 255, 255, 0.85);
 }
 .wp-section p {
   font-size: 0.95rem;
