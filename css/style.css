@@ -1116,12 +1116,32 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-tl-step strong { display: block; font-size: 0.9rem; margin-bottom: 6px; }
 .wp-tl-step p { font-size: 0.76rem; color: var(--ink-soft); margin: 0; line-height: 1.7; }
 
+/* デモ動画の埋め込み */
+.wp-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(139, 134, 153, 0.12);
+  box-shadow: 0 18px 40px rgba(157, 184, 232, 0.22);
+  margin-top: 28px;
+}
+.wp-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* アプリ画面のステップフロー */
 .wp-flow {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   margin-top: 24px;
+  align-items: end;
 }
 .wp-flow figure { text-align: center; }
 .wp-flow img { width: 100%; height: auto; display: block; }
