@@ -1264,6 +1264,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   gap: clamp(18px, 4vw, 40px);
   align-items: center;
 }
+.wp-ui-row-rev { grid-template-columns: 1fr minmax(0, 230px); }
 .wp-ui-row-rev .wp-ui-shot { order: 2; }
 .wp-ui-shot img {
   width: 100%;
