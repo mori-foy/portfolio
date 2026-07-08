@@ -555,7 +555,9 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-claude { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-gemini { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-miro { background: #ffdd33; }
-.tool-codex { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
+/* OpenAIは全製品共通の花びらロゴのみで、Codex専用ロゴは存在しないため
+   ターミナル記号でCodex(CLIツール)であることを表す */
+.tool-codex { background: #000; color: #fff; font-family: "SFMono-Regular", Consolas, monospace; font-size: 1.05rem; }
 .tool-nextjs { background: #000; }
 .tool-firebase { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-vercel { background: #000; }
