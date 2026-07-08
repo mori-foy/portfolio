@@ -1027,6 +1027,26 @@ body.hero-in .line-inner { transform: translateY(0); }
   color: var(--ink);
   margin-bottom: 1em;
 }
+.wp-list {
+  list-style: none;
+  margin-bottom: 1em;
+}
+.wp-list li {
+  position: relative;
+  padding: 8px 0 8px 22px;
+  border-bottom: 1px dashed rgba(139, 134, 153, 0.2);
+  font-size: 0.92rem;
+}
+.wp-list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1.05em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-sky));
+}
 .wp-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
