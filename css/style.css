@@ -1259,7 +1259,6 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-info {
   display: grid;
   gap: 0;
-  max-width: 520px;
 }
 .wp-info > div {
   display: flex;
