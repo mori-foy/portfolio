@@ -1305,6 +1305,13 @@ body.hero-in .line-inner { transform: translateY(0); }
   object-fit: cover;
 }
 .wp-shot-wide img { aspect-ratio: 16 / 9; }
+/* ロゴなどは切り抜かずそのまま表示 */
+.wp-shot-logo img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  padding: 18px 24px;
+  box-sizing: border-box;
+}
 .wp-shot figcaption {
   font-family: var(--font-accent);
   font-size: 0.75rem;
