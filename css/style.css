@@ -1265,16 +1265,19 @@ body.hero-in .line-inner { transform: translateY(0); }
   align-items: center;
   position: relative;
 }
-/* UI上の該当箇所を指す丸 */
+/* UI上の該当箇所を指す点 */
 .wp-ui-shot { position: relative; }
 .wp-ui-marker {
   position: absolute;
-  border: 2px solid var(--accent);
-  border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(157, 184, 232, 0.4);
+  width: 11px;
+  height: 11px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(157, 184, 232, 0.3);
 }
-/* 指し線が見えないスマホでも対応が分かるよう、丸と説明カードを同系色でペアリング */
-.wp-ui-marker-b { border-color: var(--accent-sky); box-shadow: 0 2px 8px rgba(111, 203, 224, 0.4); }
+/* 指し線が見えないスマホでも対応が分かるよう、点と説明カードを同系色でペアリング */
+.wp-ui-marker-b { background: var(--accent-sky); box-shadow: 0 0 0 4px rgba(111, 203, 224, 0.3); }
 /* 丸から注釈カードへ伸びる線 */
 .wp-ui-lines {
   position: absolute;
@@ -1518,8 +1521,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-ui-row { grid-template-columns: 1fr; gap: 14px; }
   .wp-ui-row-rev { grid-template-columns: 1fr; }
   .wp-ui-row-rev .wp-ui-shot { order: 0; }
-  /* 画像は見やすさ優先で大きめに、注釈カードはコンパクトに */
-  .wp-ui-shot { max-width: min(320px, 78%); margin: 0 auto; width: 100%; }
+  /* PCと同様、画像は控えめなサイズに */
+  .wp-ui-shot { max-width: min(200px, 56%); margin: 0 auto; width: 100%; }
   /* 縦積みでは線の座標が合わないため非表示(丸マーカーの色対応で代替) */
   .wp-ui-lines { display: none; }
   .wp-ui-callouts { gap: 10px; }
