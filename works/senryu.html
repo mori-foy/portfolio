@@ -59,7 +59,7 @@
 
     <!-- ▼▼ どんなサービスか ▼▼ -->
     <section class="wp-section reveal">
-      <h2><span class="wp-section-num">01</span>Overview — 今日の気分を、ひと句に。</h2>
+      <h2><span class="wp-section-num">01</span>Overview — 写真ではなく、言葉で日常を共有する。</h2>
       <p>
         「川柳なう。」は、いま感じたことを五・七・五のひと句にして投稿するSNSです。
         写真や長文ではなく、17音という制約のなかで気分を表現することで、
@@ -91,34 +91,150 @@
             <span class="tool-icon tool-codex" title="Codex">&gt;_</span>
           </div>
         </dd></div>
-        <div><dt>期間</dt><dd>2026</dd></div>
+        <div><dt>製作期間</dt><dd>2日(2026.5.27〜5.28)</dd></div>
+        <div><dt>メンバー</dt><dd>1人</dd></div>
+        <div><dt>製作形態</dt><dd>個人開発(自主制作)</dd></div>
       </dl>
+    </section>
+
+    <!-- ▼▼ 制作背景 ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">03</span>Background — 制作のきっかけ</h2>
+      <div class="wp-origin-grid">
+        <div class="wp-origin-card">
+          <span class="wp-origin-tag">きっかけ1</span>
+          <h4>写真共有アプリ「BeReal」での情報漏洩・炎上が相次ぐ</h4>
+          <p>2026年春、BeRealを通じた個人情報の流出が相次ぎ、大きな話題になった。「友達限定だから安全」という前提が、実は簡単に崩れてしまう仕組みだったことに気づいた。</p>
+        </div>
+        <div class="wp-origin-card">
+          <span class="wp-origin-tag">きっかけ2</span>
+          <h4>友達の一言「川柳って、昔の即興ラップバトルみたいなものだよな」</h4>
+          <p>実際、川柳は江戸時代の「前句付け」という、お題に即興で句を付ける遊びがルーツ。即興で言葉を投げ合うという構造は、たしかにラップバトルに近いものがある。</p>
+        </div>
+      </div>
+      <p class="wp-origin-conclusion">
+        炎上リスクのないBeRealのようなものがあればいいな<br />
+        <span>↓</span><br />
+        それなら、写真ではなく川柳を即興で詠ませよう!
+      </p>
+    </section>
+
+    <!-- ▼▼ 遊び方 ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">04</span>How it works — 詠んで、届ける。</h2>
+      <p>ランダムな時間に届く通知から、投稿、リアクションまでの流れです。</p>
+      <div class="wp-flow">
+        <figure>
+          <img src="../assets/senryu_compose.png" alt="通知を受けて詠む画面が開いた状態。5分のタイマーがスタート" loading="lazy" />
+          <figcaption><span class="wp-flow-num">1</span>ランダムな時間に通知が来る</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/senryu_compose_input.png" alt="上の句・中の句・下の句をひらがなで入力する画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">2</span>5分以内に一句詠む</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/senryu_post_result.png" alt="投稿が完了し、和紙背景のカードで表示された画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">3</span>投稿!</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/senryu_timeline_akapen.png" alt="友達の投稿がタイムラインに並ぶ画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">4</span>友達の投稿が見れる</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- ▼▼ こだわり・工夫した点 ▼▼ -->
     <section class="wp-section reveal">
-      <h2><span class="wp-section-num">03</span>Design — こだわったところ</h2>
+      <h2><span class="wp-section-num">05</span>Design — こだわったところ</h2>
       <p>
         言葉が主役のサービスなので、UIは余白と文字組みを最優先に設計しました。
-        (ここに、デザイン面・実装面で工夫した点を書いてください)
+        コンセプトは「写真ではなく限られた言葉で日常を共有する、新しいSNS」。
       </p>
-      <div class="wp-gallery wp-gallery-center" style="margin-top: 24px;">
+
+      <h3 class="wp-subhead">ロゴ</h3>
+      <div class="wp-gallery wp-gallery-center" style="margin-bottom: 24px;">
         <figure class="wp-shot wp-shot-logo">
           <img src="../assets/logo_senryunow.png" alt="川柳なう。のロゴ" loading="lazy" />
           <figcaption>手描き風の題字で、言葉あそびの温かみを表現</figcaption>
         </figure>
       </div>
+
+      <h3 class="wp-subhead">継続を促す工夫 — 5段階ランクシステム</h3>
+      <p>
+        投稿を続けることで、5段階のランクが上昇していく仕組みを導入。
+        継続率の向上だけでなく、アプリ全体の世界観にも一貫性を持たせています。
+        最高ランクは「宗匠」。
+      </p>
+      <div class="wp-gallery wp-gallery-center" style="margin-top: 20px;">
+        <figure class="wp-shot">
+          <img src="../assets/senryu_profile_rank.png" alt="プロフィール画面。最高ランク「宗匠」のバッジとマイベスト川柳が表示されている" loading="lazy" />
+          <figcaption>プロフィール画面 — ランクとマイベスト川柳を表示</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="wp-subhead">UIのこだわり</h3>
+      <div class="wp-ui">
+        <div class="wp-ui-row">
+          <div class="wp-ui-shot">
+            <img src="../assets/senryu_compose_input.png" alt="詠む画面。上部にタイマー、中央に縦書きの入力欄" loading="lazy" />
+            <span class="wp-ui-marker wp-ui-marker-a" style="left: 50%; top: 10.5%;" aria-hidden="true"></span>
+            <span class="wp-ui-marker wp-ui-marker-b" style="left: 50%; top: 28%;" aria-hidden="true"></span>
+          </div>
+          <div class="wp-ui-callouts">
+            <div class="wp-ui-callout wp-ui-callout-a">
+              <h4>ヘッダーの時間制限</h4>
+              <p>スクロールしても残り時間が分かるよう固定。投稿までのカウントダウンを常に視認できるようにした。</p>
+            </div>
+            <div class="wp-ui-callout wp-ui-callout-b">
+              <h4>縦書き表示</h4>
+              <p>川柳は縦書きで読むものなので、本来の読み心地を、そのままアプリへ。筆文字フォントと組み合わせ、和の世界観を視覚的に表現。短歌モード(5句構成)でも自然に収まる設計に。</p>
+            </div>
+          </div>
+        </div>
+        <div class="wp-ui-row wp-ui-row-rev">
+          <div class="wp-ui-shot">
+            <img src="../assets/senryu_word_candidates.png" alt="候補ワードと投稿位置情報が表示された画面" loading="lazy" />
+            <span class="wp-ui-marker wp-ui-marker-a" style="left: 50%; top: 26%;" aria-hidden="true"></span>
+            <span class="wp-ui-marker wp-ui-marker-b" style="left: 30%; top: 66%;" aria-hidden="true"></span>
+          </div>
+          <div class="wp-ui-callouts">
+            <div class="wp-ui-callout wp-ui-callout-a">
+              <h4>ワードの候補表示</h4>
+              <p>時間やアイデアがない時も、ランダムな組み合わせで一句完成。意味のない言葉の並びも、思わぬ面白さを生むことがある。</p>
+            </div>
+            <div class="wp-ui-callout wp-ui-callout-b">
+              <h4>位置情報の表示</h4>
+              <p>選択制で位置情報を共有することが可能に。「どこで詠んだか」が見えることで、一句の背景が浮かび上がる。</p>
+            </div>
+          </div>
+        </div>
+        <div class="wp-ui-row">
+          <div class="wp-ui-shot">
+            <img src="../assets/senryu_timeline_akapen.png" alt="友達の投稿にスタンプと赤ペン添削を送る画面" loading="lazy" />
+            <span class="wp-ui-marker wp-ui-marker-a" style="left: 50%; top: 55%;" aria-hidden="true"></span>
+          </div>
+          <div class="wp-ui-callouts">
+            <div class="wp-ui-callout wp-ui-callout-a">
+              <h4>リアクション</h4>
+              <p>友達の投稿にスタンプやコメントを送ることができる。「コメント」ではなく、「赤ペンで添削」という表現により、川柳なう。の世界観を崩さない設計に。</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ▼▼ スクリーンショット(4:3推奨、何枚でも) ▼▼ -->
+    <!-- ▼▼ スクリーンショット ▼▼ -->
     <section class="wp-section reveal">
-      <h2><span class="wp-section-num">04</span>Gallery</h2>
+      <h2><span class="wp-section-num">06</span>Gallery</h2>
       <div class="wp-gallery">
-        <figure class="wp-shot wp-shot-empty"><span>COMING SOON</span></figure>
-        <figure class="wp-shot wp-shot-empty"><span>COMING SOON</span></figure>
-        <!-- 画像を入れるときはこの形式で:
-        <figure class="wp-shot"><img src="../assets/senryu-1.jpg" alt="投稿画面" /><figcaption>投稿画面</figcaption></figure>
-        -->
+        <figure class="wp-shot">
+          <img src="../assets/senryu_post_detail.png" alt="投稿詳細画面。スタンプと赤ペン添削のやり取りが表示されている" loading="lazy" />
+          <figcaption>投稿詳細 — スタンプと赤ペン添削のやり取り</figcaption>
+        </figure>
+        <figure class="wp-shot">
+          <img src="../assets/senryu_post_result.png" alt="投稿完了直後のタイムライン画面" loading="lazy" />
+          <figcaption>投稿完了 — 和紙背景のカードで表示</figcaption>
+        </figure>
       </div>
     </section>
 

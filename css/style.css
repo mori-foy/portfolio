@@ -1296,6 +1296,56 @@ body.hero-in .line-inner { transform: translateY(0); }
   50% { transform: rotate(90deg) translateX(4px); opacity: 1; }
 }
 
+/* 制作背景(きっかけ2カード + 結論) */
+.wp-origin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+.wp-origin-card {
+  background: rgba(207, 228, 245, 0.25);
+  border: 1px solid rgba(139, 134, 153, 0.14);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.wp-origin-tag {
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(120deg, var(--accent), var(--accent-sky));
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 12px;
+}
+.wp-origin-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.wp-origin-card p {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin: 0;
+}
+.wp-origin-conclusion {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 2;
+  margin-top: 28px;
+}
+.wp-origin-conclusion span {
+  color: var(--accent);
+  font-weight: 400;
+}
+
 /* 小見出し */
 .wp-subhead {
   display: flex;
@@ -1546,6 +1596,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-gallery { grid-template-columns: 1fr; }
   /* つくる/発信する/売る: 見出し+説明の横並び行でコンパクトに */
   .wp-cards3 { grid-template-columns: 1fr; gap: 8px; }
+  .wp-origin-grid { grid-template-columns: 1fr; gap: 14px; }
   .wp-cards3 > div {
     display: flex;
     align-items: center;
