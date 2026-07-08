@@ -48,37 +48,65 @@
       </div>
     </header>
 
-    <!-- ▼▼ メインビジュアル(4:3〜16:9くらいの画像を推奨) ▼▼ -->
+    <!-- ▼▼ メインビジュアル ▼▼ -->
     <div class="wp-hero wp-hero-photo reveal">
       <img src="../assets/card_senryu.jpg" alt="川柳なう。のメインビジュアル" />
     </div>
 
     <!-- ▼▼ どんなサービスか ▼▼ -->
     <section class="wp-section reveal">
-      <h2><span class="wp-section-num">01</span>Overview — どんなサービス?</h2>
+      <h2><span class="wp-section-num">01</span>Overview — 今日の気分を、ひと句に。</h2>
       <p>
         「川柳なう。」は、いま感じたことを五・七・五のひと句にして投稿するSNSです。
         写真や長文ではなく、17音という制約のなかで気分を表現することで、
         飾らない・盛らない、ゆるやかなコミュニケーションが生まれます。
       </p>
-      <p>
-        タイムラインには友達の「今日の一句」が流れ、
-        気に入った句にはリアクションで返せます。
-      </p>
+      <div class="wp-hiw">
+        <div><span class="wp-hiw-label">Who</span><span class="wp-hiw-text">気軽に一句詠みたい人</span><span class="wp-hiw-tail">が</span></div>
+        <div><span class="wp-hiw-label">Why</span><span class="wp-hiw-text">即興で楽しむ</span><span class="wp-hiw-tail">ための</span></div>
+        <div><span class="wp-hiw-label">How</span><span class="wp-hiw-text">川柳投稿SNS</span></div>
+      </div>
+      <div class="wp-cards3">
+        <div><h3>詠む</h3><p>ひらがな入力で、五・七・五を<br />自動カウント</p></div>
+        <div><h3>共有する</h3><p>タイムラインで<br />友達に届ける</p></div>
+        <div><h3>楽しむ</h3><p>気に入った句には<br />リアクションで返す</p></div>
+      </div>
+    </section>
+
+    <!-- ▼▼ 担当・期間・ツール ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">02</span>Project Info</h2>
+      <dl class="wp-info">
+        <div><dt>担当</dt><dd>企画・UIデザイン・実装(個人開発)</dd></div>
+        <div><dt>ツール</dt><dd>
+          <div class="tool-icons wp-tools">
+            <span class="tool-icon tool-nextjs" title="Next.js"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#fff" d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/></svg></span>
+            <span class="tool-icon tool-firebase" title="Firebase"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="#ffa000" d="M19.455 8.369c-.538-.748-1.778-2.285-3.681-4.569-.826-.991-1.535-1.832-1.884-2.245a146 146 0 0 0-.488-.576l-.207-.245-.113-.133-.022-.032-.01-.005L12.57 0l-.609.488c-1.555 1.246-2.828 2.851-3.681 4.64-.523 1.064-.864 2.105-1.043 3.176-.047.241-.088.489-.121.738-.209-.017-.421-.028-.632-.033-.018-.001-.035-.002-.059-.003a7.46 7.46 0 0 0-2.28.274l-.317.089-.163.286c-.765 1.342-1.198 2.869-1.252 4.416-.07 2.01.477 3.954 1.583 5.625 1.082 1.633 2.61 2.882 4.42 3.611l.236.095.071.025.003-.001a9.59 9.59 0 0 0 2.941.568q.171.006.342.006c1.273 0 2.513-.249 3.69-.742l.008.004.313-.145a9.63 9.63 0 0 0 3.927-3.335c1.01-1.49 1.577-3.234 1.641-5.042.075-2.161-.643-4.304-2.133-6.371m-7.083 6.695c.328 1.244.264 2.44-.191 3.558-1.135-1.12-1.967-2.352-2.475-3.665-.543-1.404-.87-2.74-.974-3.975.48.157.922.366 1.315.622 1.132.737 1.914 1.902 2.325 3.461zm.207 6.022c.482.368.99.712 1.513 1.028-.771.21-1.565.302-2.369.273a8 8 0 0 1-.373-.022c.458-.394.869-.823 1.228-1.279zm1.347-6.431c-.516-1.957-1.527-3.437-3.002-4.398-.647-.421-1.385-.741-2.194-.95.011-.134.026-.268.043-.4.014-.113.03-.216.046-.313.133-.689.332-1.37.589-2.025.099-.25.206-.499.321-.74l.004-.008c.177-.358.376-.719.61-1.105l.092-.152-.003-.001c.544-.851 1.197-1.627 1.942-2.311l.288.341c.672.796 1.304 1.548 1.878 2.237 1.291 1.549 2.966 3.583 3.612 4.48 1.277 1.771 1.893 3.579 1.83 5.375-.049 1.395-.461 2.755-1.195 3.933-.694 1.116-1.661 2.05-2.8 2.708-.636-.318-1.559-.839-2.539-1.599.79-1.575.952-3.28.479-5.072zm-2.575 5.397c-.725.939-1.587 1.55-2.09 1.856-.081-.029-.163-.06-.243-.093l-.065-.026c-1.49-.616-2.747-1.656-3.635-3.01-.907-1.384-1.356-2.993-1.298-4.653.041-1.19.338-2.327.882-3.379.316-.07.638-.114.96-.131l.084-.002c.162-.003.324-.003.478 0 .227.011.454.035.677.07.073 1.513.445 3.145 1.105 4.852.637 1.644 1.694 3.162 3.144 4.515z"/></svg></span>
+            <span class="tool-icon tool-vercel" title="Vercel"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#fff" d="m12 1.608 12 20.784H0Z"/></svg></span>
+          </div>
+        </dd></div>
+        <div><dt>期間</dt><dd>2026</dd></div>
+      </dl>
     </section>
 
     <!-- ▼▼ こだわり・工夫した点 ▼▼ -->
     <section class="wp-section reveal">
-      <h2><span class="wp-section-num">02</span>Design — こだわったところ</h2>
+      <h2><span class="wp-section-num">03</span>Design — こだわったところ</h2>
       <p>
         言葉が主役のサービスなので、UIは余白と文字組みを最優先に設計しました。
         (ここに、デザイン面・実装面で工夫した点を書いてください)
       </p>
+      <div class="wp-gallery wp-gallery-center" style="margin-top: 24px;">
+        <figure class="wp-shot wp-shot-logo">
+          <img src="../assets/logo_senryunow.png" alt="川柳なう。のロゴ" loading="lazy" />
+          <figcaption>手描き風の題字で、言葉あそびの温かみを表現</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- ▼▼ スクリーンショット(4:3推奨、何枚でも) ▼▼ -->
     <section class="wp-section reveal">
-      <h2><span class="wp-section-num">03</span>Screenshots</h2>
+      <h2><span class="wp-section-num">04</span>Gallery</h2>
       <div class="wp-gallery">
         <figure class="wp-shot wp-shot-empty"><span>COMING SOON</span></figure>
         <figure class="wp-shot wp-shot-empty"><span>COMING SOON</span></figure>
@@ -86,16 +114,6 @@
         <figure class="wp-shot"><img src="../assets/senryu-1.jpg" alt="投稿画面" /><figcaption>投稿画面</figcaption></figure>
         -->
       </div>
-    </section>
-
-    <!-- ▼▼ 担当・期間・ツール ▼▼ -->
-    <section class="wp-section reveal">
-      <h2><span class="wp-section-num">04</span>Project Info</h2>
-      <dl class="wp-info">
-        <div><dt>担当</dt><dd>企画・UIデザイン・実装(個人開発)</dd></div>
-        <div><dt>期間</dt><dd>2026</dd></div>
-        <div><dt>ツール</dt><dd>Next.js / Firebase / Vercel</dd></div>
-      </dl>
     </section>
 
     <div class="wp-cta reveal">

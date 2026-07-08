@@ -556,6 +556,9 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-gemini { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-miro { background: #ffdd33; }
 .tool-codex { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
+.tool-nextjs { background: #000; }
+.tool-firebase { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
+.tool-vercel { background: #000; }
 /* project info 内はひとまわり小さく */
 .wp-tools { margin-bottom: 0; padding: 2px 0; }
 .wp-tools .tool-icon {
