@@ -1350,14 +1350,21 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-origin-conclusion {
   text-align: center;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
   color: var(--ink);
-  line-height: 2;
-  margin-top: 28px;
+  line-height: 1.9;
+  margin-top: 32px;
+  padding: 28px 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(207, 228, 245, 0.55), rgba(221, 210, 240, 0.55));
+  box-shadow: 0 14px 30px rgba(157, 184, 232, 0.22);
 }
 .wp-origin-conclusion span {
+  display: inline-block;
   color: var(--accent);
   font-weight: 400;
+  font-size: 0.85em;
+  margin: 2px 0;
 }
 
 /* ランク棒グラフ + プロフィールUIの横並び */
