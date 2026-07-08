@@ -1323,19 +1323,15 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-origin-img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 160px;
   object-fit: cover;
   border-radius: 14px;
   margin-bottom: 14px;
 }
 .wp-origin-img-illust {
-  aspect-ratio: auto;
-  width: 55%;
-  max-width: 220px;
-  margin: 0 auto 14px;
   object-fit: contain;
   background: #fff;
-  padding: 10px;
+  padding: 16px;
   box-sizing: border-box;
 }
 .wp-origin-card h4 {
