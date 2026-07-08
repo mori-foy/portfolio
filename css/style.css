@@ -1437,9 +1437,9 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-cards3 > div { padding: 16px; }
   .wp-cards3 p br { display: none; }
 
-  /* who/why/how は折り返し許可で中央に */
-  .wp-hiw > div { flex-wrap: wrap; justify-content: center; row-gap: 6px; }
-  .wp-hiw-text { font-size: 0.85rem; padding: 5px 14px; text-align: center; }
+  /* who/why/how: PCと同じく行は左揃えのまま、ブロック全体だけ中央 */
+  .wp-hiw > div { flex-wrap: wrap; row-gap: 6px; }
+  .wp-hiw-text { font-size: 0.85rem; padding: 5px 14px; }
 
   /* タイムラインは縦1列のカードに(矢羽根は解除) */
   .wp-timeline { grid-template-columns: 1fr; gap: 10px; }
