@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>テクルン — Minami Morikawa</title>
+<meta name="description" content="親子で持続可能な散歩促進サービス「テクルン」の制作事例" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<!-- scroll progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- floating pastel blobs (parallax) -->
+<div class="blobs" aria-hidden="true">
+  <div class="blob blob-a" data-speed="0.15"></div>
+  <div class="blob blob-c" data-speed="0.10"></div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../index.html">P<span class="logo-dot">.</span></a>
+  <nav class="nav">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#works">Projects</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <article class="wp">
+
+    <a class="wp-back reveal" href="../index.html#works">← Projects に戻る</a>
+
+    <!-- ▼▼ タイトルまわり ▼▼ -->
+    <header class="wp-head">
+      <p class="wp-meta reveal">Product Design / 2024.12</p>
+      <h1 class="wp-title" data-split>テクルン</h1>
+      <p class="wp-sub reveal delay-1">親子で持続可能な散歩促進サービス</p>
+      <div class="wp-tags reveal delay-1">
+        <span>UI/UXデザイン</span><span>プロダクトデザイン</span>
+      </div>
+    </header>
+
+    <!-- ▼▼ メインビジュアル ▼▼ -->
+    <div class="wp-hero wp-hero-photo reveal">
+      <img src="../assets/card_tekurun.jpg" alt="テクルンのメインビジュアル" />
+    </div>
+
+    <!-- ▼▼ どんなサービスか ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">01</span>Overview — 一緒に歩いて、テクルンを育てる</h2>
+      <p>
+        「テクルン」は、テクルンと一緒に散歩をし、外見を「進化」させて楽しむ位置情報ゲームです。
+        遊び感覚で自然と運動の習慣が身につく、"がんばらなくても健康に良い" おもちゃを目指しました。
+      </p>
+      <div class="wp-hiw">
+        <div><span class="wp-hiw-label">Who</span><span class="wp-hiw-text">小学生の子供とその親</span><span class="wp-hiw-tail">が</span></div>
+        <div><span class="wp-hiw-label">Why</span><span class="wp-hiw-text">楽しく健康になる</span><span class="wp-hiw-tail">ための</span></div>
+        <div><span class="wp-hiw-label">How</span><span class="wp-hiw-text">散歩促進サービス</span></div>
+      </div>
+    </section>
+
+    <!-- ▼▼ 担当・期間・ツール ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">02</span>Project Info</h2>
+      <dl class="wp-info">
+        <div><dt>担当</dt><dd>コンセプト立案・UI/UXデザイン・プロダクトデザイン(個人開発)</dd></div>
+        <div><dt>ツール</dt><dd>
+          <div class="tool-icons wp-tools">
+            <span class="tool-icon tool-miro" title="Miro"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="#050038" d="M17.392 0H13.9L17 4.808 10.444 0H6.949l3.102 6.3L3.494 0H0l3.05 8.131L0 24h3.494L10.05 6.985 6.949 24h3.494L17 5.494 13.899 24h3.493L24 3.672 17.392 0z"/></svg></span>
+            <span class="tool-icon tool-ai" title="Illustrator">Ai</span>
+            <span class="tool-icon tool-figma" title="Figma"><svg viewBox="0 0 38 57" width="11" height="16" aria-hidden="true"><path fill="#1abcfe" d="M19 28.5C19 23.253 23.253 19 28.5 19C33.747 19 38 23.253 38 28.5C38 33.747 33.747 38 28.5 38C23.253 38 19 33.747 19 28.5Z"/><path fill="#0acf83" d="M0 47.5C0 42.253 4.253 38 9.5 38H19V47.5C19 52.747 14.747 57 9.5 57C4.253 57 0 52.747 0 47.5Z"/><path fill="#ff7262" d="M19 0V19H28.5C33.747 19 38 14.747 38 9.5C38 4.253 33.747 0 28.5 0H19Z"/><path fill="#f24e1e" d="M0 9.5C0 14.747 4.253 19 9.5 19H19V0H9.5C4.253 0 0 4.253 0 9.5Z"/><path fill="#a259ff" d="M0 28.5C0 33.747 4.253 38 9.5 38H19V19H9.5C4.253 19 0 23.253 0 28.5Z"/></svg></span>
+            <span class="tool-icon tool-openai" title="ChatGPT"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#000" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg></span>
+          </div>
+        </dd></div>
+        <div><dt>製作期間</dt><dd>1週間</dd></div>
+        <div><dt>メンバー</dt><dd>1人</dd></div>
+        <div><dt>製作形態</dt><dd>自主制作(2024.12)</dd></div>
+      </dl>
+    </section>
+
+    <!-- ▼▼ 制作背景 ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">03</span>Background — 制作のきっかけ</h2>
+      <p>
+        「宮城県の5歳女子と小学3年女子の肥満率が全国1位」というニュースを耳にした。
+        なぜ1位なのか? そして、改善するサービスがあったら良いなと思い、制作に至った。
+      </p>
+      <div class="wp-origin-grid">
+        <div class="wp-origin-card">
+          <span class="wp-origin-tag">リサーチ1</span>
+          <img class="wp-origin-img" src="../assets/tekurun_stat1.jpg" alt="10人に1人の子供が肥満" loading="lazy" />
+          <h4>宮城県における "肥満傾向" の子供の割合</h4>
+          <p>全国平均値を上回った年齢は、女子で年齢区分の9割以上、男子で7割以上(文部科学省 令和4年度学校保健統計調査結果より)。</p>
+        </div>
+        <div class="wp-origin-card">
+          <span class="wp-origin-tag">リサーチ2</span>
+          <img class="wp-origin-img" src="../assets/tekurun_stat2.jpg" alt="親の健康意識が子供に影響している" loading="lazy" />
+          <h4>宮城県の肥満と高い有意水準があったカテゴリ</h4>
+          <p>失業率7.8%(全国5位)、ラーメンの店舗数432店、インターネット使用率77.4%。特に失業やインターネットの使用は、小学生とはほぼ関係のないカテゴリである(富山大学経済学部山田ゼミの調査より)。</p>
+        </div>
+      </div>
+      <p class="wp-origin-conclusion">
+        親の健康意識が子供に影響している<br />
+        <span>↓</span><br />
+        それなら、親子で一緒に楽しく歩ける仕組みをつくろう!
+      </p>
+    </section>
+
+    <!-- ▼▼ コンセプト ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">04</span>Concept — 歩いて、育てて、自分好みにアップデート</h2>
+      <p>
+        進化するお散歩パートナー「テクルン」は、一緒に歩くことで、自然と運動の習慣が身につく。
+        しかも、「気がついたら健康になっていた」という、"がんばらなくても健康に良い" がこのおもちゃの魅力。
+        たくさん歩くとテクルンが進化する。
+      </p>
+      <div class="wp-gallery">
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/tekurun_evo1.jpg" alt="販売時のテクルン" loading="lazy" /><figcaption>販売時</figcaption></figure>
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/tekurun_evo2.jpg" alt="耳が生えたテクルン" loading="lazy" /><figcaption>耳が生えた!</figcaption></figure>
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/tekurun_evo3.jpg" alt="しっぽが生えたテクルン" loading="lazy" /><figcaption>しっぽが生えた!</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ▼▼ UIデザイン ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">05</span>UI Design — 外出に最適なシンプル設計</h2>
+      <p>
+        おでかけの中で自然に「運動」や「健康」に結びつくよう、情報を最小限に、行動を最大限に引き出す。
+        ユーザー(子供と保護者)がテクルンの様子を直感的に感じられるよう、プロダクト中心に設計した。
+      </p>
+      <div class="wp-gallery">
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/tekurun_ui_home.jpg" alt="ホーム画面。地図上にテクルンや目的地の候補が表示されている" loading="lazy" /><figcaption>ホーム画面</figcaption></figure>
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/tekurun_ui_pet.jpg" alt="テクルン画面。レベルと経験値、テクルン本体が表示されている" loading="lazy" /><figcaption>テクルン画面</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ▼▼ UIフロー ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">06</span>How it works — テクルンと一緒に散歩する</h2>
+      <p>好きな目的地を選び、歩いて向かい、豆知識をゲットしながらテクルンを育てる流れです。</p>
+      <div class="wp-flow">
+        <figure>
+          <img src="../assets/tekurun_walk1.jpg" alt="目的地を選択する画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">1</span>ゴールを選択</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/tekurun_walk2.jpg" alt="星を拾いながら目的地を目指す画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">2</span>散歩する</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/tekurun_walk3.jpg" alt="目的地に到着した画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">3</span>ゴールに到着</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/tekurun_walk4.jpg" alt="目的地にちなんだ豆知識クイズが表示された画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">4</span>豆知識をゲット</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/tekurun_walk5.jpg" alt="テクルンがレベルアップした画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">5</span>テクルンがレベルアップ</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="wp-subhead">テクルンのきせかえを行う</h3>
+      <div class="wp-flow">
+        <figure>
+          <img src="../assets/tekurun_outfit1.jpg" alt="きせかえを選択する画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">1</span>きせかえを選択</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/tekurun_outfit2.jpg" alt="変更箇所を選択する画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">2</span>変更箇所を選択</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/tekurun_outfit3.jpg" alt="好きな色を選択する画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">3</span>好きな色を選択</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/tekurun_outfit4.jpg" alt="決定を選択する画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">4</span>「決定」を選択</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/tekurun_outfit5.jpg" alt="テクルン本体に色が適用された画面" loading="lazy" />
+          <figcaption><span class="wp-flow-num">5</span>テクルン本体に適用</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ▼▼ プロダクトデザイン ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">07</span>Product Design — こだわったところ</h2>
+
+      <h3 class="wp-subhead">POINT1 — 自分好みにアップデートしやすい見た目</h3>
+      <p>
+        プロダクトは、カッコイイにもカワイイにも適応できるグレーを採用。
+        搭載されているLEDライトでカラーの変更が可能。進化に合わせて耳やしっぽが生える。
+      </p>
+
+      <h3 class="wp-subhead">POINT2 — 手に収まるサイズ感</h3>
+      <p>
+        大きさは約13cm×13cm(本体部分)。小学校低学年の手の平均サイズに合わせて設計。
+        子供だと両手に、大人は片手で持つことができる。
+      </p>
+      <div class="wp-gallery wp-gallery-center" style="margin-bottom: 24px;">
+        <figure class="wp-shot wp-shot-logo">
+          <img src="../assets/tekurun_size.jpg" alt="大人は片手、子供は両手でテクルンを持つサイズ比較" loading="lazy" />
+        </figure>
+      </div>
+
+      <h3 class="wp-subhead">POINT3 — 安全に持ち運べる専用ポーチ</h3>
+      <p>
+        専用のポーチに収納することで両手が空き、安全に散歩を楽しむことができる。
+        ポーチには穴が開いており、テクルンの様子を確認することができる。
+      </p>
+      <div class="wp-gallery wp-gallery-center">
+        <figure class="wp-shot wp-shot-wide">
+          <img src="../assets/tekurun_pouch.jpg" alt="専用ポーチに入れて持ち運ばれるテクルン" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ▼▼ ブランド設計 ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">08</span>Brand Design — ブランド設計</h2>
+
+      <h3 class="wp-subhead">Service name</h3>
+      <p>
+        親しみやすさを出すために、歩く音を表す「テクテク」と、楽しさを表す「ルンルン」という擬音語を合わせ、「テクルン」とした。
+        子どもが楽しく "歩く" ことを習慣化するとともに、成長するキャラクターと一緒に、"テクテク歩いてルンルン気分" を味わえるようにという意味を込めた。
+      </p>
+
+      <h3 class="wp-subhead">Logo</h3>
+      <p>
+        子どもの遊びや成長を象徴する「積み木」のようなかたちをイメージして設計。
+        文字ごとに異なる色と形を与えることで、組み合わせの楽しさや、変化・進化するコンセプトを表現。
+        アイコンでは、ロゴ全体を小さく再構成し、コンパクトでも視認性を保てる配置にした。
+      </p>
+      <div class="wp-gallery wp-gallery-center">
+        <figure class="wp-shot wp-shot-logo">
+          <img src="../assets/tekurun_brand_logo.jpg" alt="テクルンのロゴとアプリアイコン" loading="lazy" />
+        </figure>
+      </div>
+
+      <h3 class="wp-subhead">Font</h3>
+      <p>親しみやすさと視認性の両立を重視し、フォントとして「ルイカ-09」を採用。文字の形状に安定感があり、ひらがな・カタカナ・漢字のバランスも良いため、幅広い年齢層にとって読みやすいフォントである。</p>
+
+      <h3 class="wp-subhead">Color</h3>
+      <p>子どもが親しみやすく楽しく感じられるよう、温かみと元気さを持つ色を採用し、視認性や快適さを両立した配色設計に。</p>
+      <div class="wp-color-bar">
+        <span class="wp-color-base">Base</span><span class="wp-color-accent"></span><span class="wp-color-sub">Sub</span>
+      </div>
+    </section>
+
+    <div class="wp-back-bottom-wrap reveal">
+      <a class="wp-back-bottom" href="../index.html#works">← Projects に戻る</a>
+    </div>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Minami Morikawa — made with soft colors</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -555,6 +555,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-gemini { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-miro { background: #ffdd33; }
 .tool-codex { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
+.tool-openai { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-nextjs { background: #000; }
 .tool-firebase { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-vercel { background: #000; }
@@ -1380,6 +1381,29 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-rank-3 { background: #6f9fe0; }
 .wp-rank-4 { background: #9c7fd4; }
 .wp-rank-5 { background: linear-gradient(180deg, #f3cf6a, #d9a934); }
+
+/* ブランドカラーバー */
+.wp-color-bar {
+  display: flex;
+  height: 64px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(74, 70, 85, 0.14);
+  margin-top: 14px;
+}
+.wp-color-bar span {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  font-family: var(--font-accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.55);
+}
+.wp-color-base { flex: 7; background: #f7941e; }
+.wp-color-accent { flex: 1; background: #fb6f7a; }
+.wp-color-sub { flex: 3; background: #fff200; }
 
 /* 小見出し */
 .wp-subhead {
