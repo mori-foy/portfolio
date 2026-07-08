@@ -1360,14 +1360,22 @@ body.hero-in .line-inner { transform: translateY(0); }
   font-weight: 400;
 }
 
-/* 5段階ランクの棒グラフ */
+/* ランク棒グラフ + プロフィールUIの横並び */
+.wp-rank-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 230px);
+  gap: clamp(20px, 4vw, 40px);
+  align-items: center;
+  margin-top: 24px;
+}
+.wp-rank-shot img { width: 100%; display: block; }
+
 .wp-rank-chart {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: clamp(10px, 3vw, 22px);
+  gap: clamp(8px, 2vw, 16px);
   height: 160px;
-  margin-top: 24px;
   padding: 0 10px;
 }
 .wp-rank-bar {
@@ -1653,6 +1661,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   /* つくる/発信する/売る: 見出し+説明の横並び行でコンパクトに */
   .wp-cards3 { grid-template-columns: 1fr; gap: 8px; }
   .wp-origin-grid { grid-template-columns: 1fr; gap: 14px; }
+  .wp-rank-layout { grid-template-columns: 1fr; }
+  .wp-rank-shot { max-width: 200px; margin: 0 auto; }
   .wp-cards3 > div {
     display: flex;
     align-items: center;
