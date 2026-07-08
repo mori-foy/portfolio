@@ -451,7 +451,6 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .delay-1 { transition-delay: 0.12s; }
 .delay-2 { transition-delay: 0.24s; }
-.delay-3 { transition-delay: 0.36s; }
 
 /* ------------------------------------------------------------
    about
@@ -717,21 +716,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   letter-spacing: 0.2em;
   color: rgba(74, 70, 85, 0.45);
 }
-.thumb-1 { background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-lavender)); }
-.thumb-2 { background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-lemon)); }
-.thumb-3 { background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-blue)); }
-.thumb-4 { background: linear-gradient(135deg, var(--pastel-lemon), var(--pastel-mint)); }
 .thumb-5 { background: linear-gradient(135deg, var(--pastel-lavender), var(--pastel-pink)); }
 .thumb-6 { background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)); }
-.thumb-logo {
-  background: var(--white);
-  padding: clamp(20px, 6vw, 48px);
-}
-.thumb-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
 .project-arrow { transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1.4); }
 .work-modal-link:hover .project-arrow { transform: translate(4px, -2px); }
@@ -1079,26 +1065,6 @@ body.hero-in .line-inner { transform: translateY(0); }
   color: var(--ink);
   margin-bottom: 1em;
 }
-.wp-list {
-  list-style: none;
-  margin-bottom: 1em;
-}
-.wp-list li {
-  position: relative;
-  padding: 8px 0 8px 22px;
-  border-bottom: 1px dashed rgba(139, 134, 153, 0.2);
-  font-size: 0.92rem;
-}
-.wp-list li::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 1.05em;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-sky));
-}
 /* who/why/how の行 */
 .wp-hiw {
   display: grid;
@@ -1375,8 +1341,6 @@ body.hero-in .line-inner { transform: translateY(0); }
   align-items: center;
   margin-top: 24px;
 }
-.wp-rank-shot img { width: 100%; display: block; }
-
 .wp-rank-chart {
   display: flex;
   align-items: flex-end;
