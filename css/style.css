@@ -512,6 +512,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   width: min(340px, 70%);
   height: auto;
   margin-top: 56px;
+  /* mp4 は透過できないため、白背景を下地に溶かして黒い線だけ見せる */
+  mix-blend-mode: multiply;
 }
 .mini-title {
   font-family: var(--font-display);
