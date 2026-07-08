@@ -958,7 +958,48 @@ body.hero-in .line-inner { transform: translateY(0); }
   transition: color 0.2s ease, transform 0.2s ease;
 }
 .wp-back:hover { color: var(--accent); transform: translateX(-4px); }
-.wp-head { margin-bottom: 36px; }
+.wp-head { position: relative; margin-bottom: 36px; }
+/* 右上のQR + Playボタン(PCのみ。スマホはタグの下に通常配置) */
+.wp-qr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.wp-qr img {
+  width: 84px;
+  height: 84px;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 134, 153, 0.16);
+  box-shadow: 0 10px 24px rgba(74, 70, 85, 0.12);
+  background: #fff;
+  padding: 6px;
+}
+.wp-qr-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(120deg, var(--accent), var(--accent-sky));
+  padding: 6px 16px;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(157, 184, 232, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wp-qr-play:hover { transform: translateY(-2px); box-shadow: 0 12px 22px rgba(157, 184, 232, 0.45); }
+@media (max-width: 640px) {
+  .wp-qr { position: static; flex-direction: row; margin-top: 18px; }
+  .wp-qr img { width: 64px; height: 64px; }
+}
 .wp-meta {
   font-family: var(--font-accent);
   font-size: 0.85rem;
