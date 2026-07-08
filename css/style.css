@@ -1263,6 +1263,28 @@ body.hero-in .line-inner { transform: translateY(0); }
   grid-template-columns: minmax(0, 230px) 1fr;
   gap: clamp(18px, 4vw, 40px);
   align-items: center;
+  position: relative;
+}
+/* UI上の該当箇所を指す丸 */
+.wp-ui-shot { position: relative; }
+.wp-ui-marker {
+  position: absolute;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(157, 184, 232, 0.4);
+}
+/* 丸から注釈カードへ伸びる線 */
+.wp-ui-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.wp-ui-lines line {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
 }
 .wp-ui-row-rev { grid-template-columns: 1fr minmax(0, 230px); }
 .wp-ui-row-rev .wp-ui-shot { order: 2; }
@@ -1410,6 +1432,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-ui-row { grid-template-columns: 1fr; }
   .wp-ui-row-rev .wp-ui-shot { order: 0; }
   .wp-ui-shot { max-width: 240px; margin: 0 auto; width: 100%; }
+  /* 縦積みでは線の座標が合わないため非表示(丸は残す) */
+  .wp-ui-lines { display: none; }
 }
 
 /* reduced motion */
