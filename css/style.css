@@ -1314,6 +1314,36 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .wp-float-row .wp-float { width: clamp(140px, 26vw, 220px); }
 
+/* タイル素材+短いラベルを並べたデザインコンセプト一覧 */
+.wp-tile-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 22px;
+}
+.wp-tile-legend > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(207, 228, 245, 0.2);
+  border: 1px solid rgba(139, 134, 153, 0.14);
+  border-radius: 999px;
+  padding: 8px 18px 8px 8px;
+}
+.wp-tile-legend img {
+  width: 44px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 8px;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+.wp-tile-legend span {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
 /* 小さめのカラーバリエーション一覧 */
 .wp-color-variants {
   display: flex;
