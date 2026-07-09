@@ -1381,6 +1381,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   align-items: center;
   margin-top: 24px;
 }
+/* 数字ブロックを先に置きたい場合の列順逆転バリエーション */
+.wp-rank-result { grid-template-columns: minmax(0, 220px) 1fr; }
 .wp-rank-chart {
   display: flex;
   align-items: flex-end;
