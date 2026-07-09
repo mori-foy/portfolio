@@ -1819,7 +1819,11 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-pipeline { flex-direction: column; gap: 6px; }
   .wp-pipeline em { animation-name: wp-pipeline-flow-vertical; }
   .wp-pipeline span { width: 100%; max-width: 260px; text-align: center; }
-  .wp-evo .wp-float { width: 100%; max-width: 200px; }
+  /* 進化ステップ(画像+矢印)は横並びのまま、画像を小さくして収める */
+  .wp-evo { flex-direction: row; gap: 4px; }
+  .wp-evo em { animation-name: wp-pipeline-flow; font-size: 1rem; }
+  .wp-evo .wp-float { width: 27vw; max-width: 100px; }
+  .wp-evo .wp-float figcaption { font-size: 0.62rem; margin-top: 6px; }
   .wp-float-lg { max-width: 280px; }
 
   /* 比較表はコンパクトに */
