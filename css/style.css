@@ -1263,6 +1263,11 @@ body.hero-in .line-inner { transform: translateY(0); }
   50% { transform: rotate(90deg) translateX(4px); opacity: 1; }
 }
 
+/* 進化ステップ(画像 + 矢印) */
+.wp-evo { margin-top: 24px; gap: clamp(10px, 2.4vw, 22px); }
+.wp-evo .wp-shot { width: clamp(140px, 22vw, 200px); margin: 0; flex-shrink: 0; }
+.wp-evo em { font-size: 1.3rem; }
+
 /* 制作背景(きっかけ2カード + 結論) */
 .wp-origin-grid {
   display: grid;
@@ -1383,27 +1388,32 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-rank-5 { background: linear-gradient(180deg, #f3cf6a, #d9a934); }
 
 /* ブランドカラーバー */
+.wp-color { margin-top: 14px; }
+.wp-color-labels {
+  display: flex;
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.wp-color-labels span { white-space: nowrap; overflow: visible; }
+.wp-color-labels span:first-child { text-align: left; }
+.wp-color-labels span:last-child { text-align: right; }
+.wp-color-labels span:not(:first-child):not(:last-child) { text-align: center; }
 .wp-color-bar {
   display: flex;
-  height: 64px;
+  height: 56px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 10px 22px rgba(74, 70, 85, 0.14);
-  margin-top: 14px;
 }
-.wp-color-bar span {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 8px;
-  font-family: var(--font-accent);
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.55);
-}
-.wp-color-base { flex: 7; background: #f7941e; }
-.wp-color-accent { flex: 1; background: #fb6f7a; }
-.wp-color-sub { flex: 3; background: #fff200; }
+.wp-color-base { flex: 7; }
+.wp-color-accent { flex: 1; }
+.wp-color-sub { flex: 3; }
+.wp-color-bar .wp-color-base { background: #f7941e; }
+.wp-color-bar .wp-color-accent { background: #fb6f7a; }
+.wp-color-bar .wp-color-sub { background: #fff200; }
 
 /* 小見出し */
 .wp-subhead {
@@ -1733,6 +1743,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-pipeline { flex-direction: column; gap: 6px; }
   .wp-pipeline em { animation-name: wp-pipeline-flow-vertical; }
   .wp-pipeline span { width: 100%; max-width: 260px; text-align: center; }
+  .wp-evo .wp-shot { width: 100%; max-width: 200px; }
 
   /* 比較表はコンパクトに */
   .wp-table { font-size: 0.78rem; }
