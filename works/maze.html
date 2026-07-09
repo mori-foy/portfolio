@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ゴールを目指せ! — Minami Morikawa</title>
+<meta name="description" content="キーボード操作で自分をゴールさせる迷路ゲーム「ゴールを目指せ!」の制作事例" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<!-- scroll progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- floating pastel blobs (parallax) -->
+<div class="blobs" aria-hidden="true">
+  <div class="blob blob-a" data-speed="0.15"></div>
+  <div class="blob blob-c" data-speed="0.10"></div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../index.html">P<span class="logo-dot">.</span></a>
+  <nav class="nav">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#works">Projects</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <article class="wp">
+
+    <a class="wp-back reveal" href="../index.html#works">← Projects に戻る</a>
+
+    <!-- ▼▼ タイトルまわり ▼▼ -->
+    <header class="wp-head">
+      <p class="wp-meta reveal">Game Programming / 2023</p>
+      <h1 class="wp-title" data-split>ゴールを目指せ!</h1>
+      <p class="wp-sub reveal delay-1">「自分」をゴールさせるシンプルな迷路ゲーム</p>
+      <div class="wp-tags reveal delay-1">
+        <span>プログラミング</span><span>ゲーム制作</span><span>Webデザイン</span>
+      </div>
+    </header>
+
+    <!-- ▼▼ メインビジュアル ▼▼ -->
+    <div class="wp-hero wp-hero-photo reveal">
+      <img src="../assets/card_maze.jpg" alt="ゴールを目指せ!のメインビジュアル" />
+    </div>
+
+    <!-- ▼▼ どんなゲームか ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">01</span>Overview — 「自分」をゴールさせるシンプルなゲーム</h2>
+      <p>
+        自分の顔アイコンを操作して、迷路のゴールを目指すシンプルなゲームです。
+        何度も楽しめるように少し難易度の高いゲームを制作し、簡単な操作ですぐに楽しめるようにしました。
+      </p>
+      <div class="wp-hiw">
+        <div><span class="wp-hiw-label">Who</span><span class="wp-hiw-text">気軽に遊べるミニゲームを探している人</span><span class="wp-hiw-tail">が</span></div>
+        <div><span class="wp-hiw-label">Why</span><span class="wp-hiw-text">何度も繰り返し楽しむ</span><span class="wp-hiw-tail">ための</span></div>
+        <div><span class="wp-hiw-label">How</span><span class="wp-hiw-text">キーボード操作の迷路ゲーム</span></div>
+      </div>
+    </section>
+
+    <!-- ▼▼ 担当・期間・ツール ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">02</span>Project Info</h2>
+      <dl class="wp-info">
+        <div><dt>ツール</dt><dd>
+          <div class="tool-icons wp-tools">
+            <span class="tool-icon" style="background:#e34f26;color:#fff;font-size:0.7rem;" title="HTML5">HTML</span>
+            <span class="tool-icon" style="background:#264de4;color:#fff;font-size:0.7rem;" title="CSS3">CSS</span>
+            <span class="tool-icon" style="background:#00005b;color:#9999ff;" title="Premiere Pro">Pr</span>
+          </div>
+        </dd></div>
+        <div><dt>製作形態</dt><dd>授業(基礎プログラミング2b)</dd></div>
+        <div><dt>製作時期</dt><dd>学部1年</dd></div>
+        <div><dt>製作期間</dt><dd>2カ月(2022.12〜2023.01)</dd></div>
+        <div><dt>人数</dt><dd>1人</dd></div>
+      </dl>
+    </section>
+
+    <!-- ▼▼ 遊び方 ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">03</span>How to play — 遊び方</h2>
+      <div class="wp-hiw">
+        <div><span class="wp-hiw-label">1</span><span class="wp-hiw-text">キーボードの上下左右を使って移動する</span></div>
+        <div><span class="wp-hiw-label">2</span><span class="wp-hiw-text">ゴールに辿り着いたら「クリア!」ボタンをクリック</span></div>
+        <div><span class="wp-hiw-label">3</span><span class="wp-hiw-text">動き回るボールに当たる or 時間切れになるとゲームオーバー</span></div>
+      </div>
+      <p style="margin-top: 20px;">全部で3ステージ。クリアできない時や、途中のステージに移動できるようにボタンも設置しています。</p>
+    </section>
+
+    <!-- ▼▼ デザイン ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">04</span>Design — ステージごとのテーマ</h2>
+      <p>各ステージにテーマを持たせてデザインしました。</p>
+      <div class="wp-gallery">
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/card_maze.jpg" alt="ステージ1:水色の迷路" loading="lazy" /><figcaption>ステージ1 — 見やすさを重視。お城の入口のような平和さをイメージ。</figcaption></figure>
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/maze_stage2.jpg" alt="ステージ2:茶色の迷路" loading="lazy" /><figcaption>ステージ2 — 暗く、不穏な雰囲気をイメージ。</figcaption></figure>
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/maze_stage3.jpg" alt="ステージ3:溶岩をイメージした迷路" loading="lazy" /><figcaption>ステージ3 — 重厚感があり、激しさや荒れている様子をイメージ。</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ▼▼ 画面ギャラリー ▼▼ -->
+    <section class="wp-section reveal">
+      <h2><span class="wp-section-num">05</span>Gallery — 画面いろいろ</h2>
+      <div class="wp-gallery">
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/maze_start.jpg" alt="スタート画面。操作方法の説明とルール、練習コースを表示" loading="lazy" /><figcaption>スタート画面</figcaption></figure>
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/maze_gameover.jpg" alt="ゲームオーバー画面" loading="lazy" /><figcaption>ゲームオーバー画面</figcaption></figure>
+        <figure class="wp-shot wp-shot-logo"><img src="../assets/maze_clear.jpg" alt="クリア画面" loading="lazy" /><figcaption>クリア画面</figcaption></figure>
+      </div>
+    </section>
+
+    <div class="wp-back-bottom-wrap reveal">
+      <a class="wp-back-bottom" href="../index.html#works">← Projects に戻る</a>
+    </div>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Minami Morikawa — made with soft colors</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -717,8 +717,6 @@ body.hero-in .line-inner { transform: translateY(0); }
   letter-spacing: 0.2em;
   color: rgba(74, 70, 85, 0.45);
 }
-.thumb-5 { background: linear-gradient(135deg, var(--pastel-lavender), var(--pastel-pink)); }
-.thumb-6 { background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)); }
 
 .project-arrow { transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1.4); }
 .work-modal-link:hover .project-arrow { transform: translate(4px, -2px); }
