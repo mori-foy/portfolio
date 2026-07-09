@@ -1286,6 +1286,16 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-evo .wp-float { width: clamp(140px, 22vw, 200px); flex-shrink: 0; }
 .wp-float-lg { max-width: 420px; margin: 0 auto 28px; }
 .wp-float-lg img { filter: drop-shadow(0 22px 28px rgba(74, 70, 85, 0.2)); }
+/* 箱で囲わず、2枚の画像を左右に並べたい時用 */
+.wp-float-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  margin-top: 24px;
+}
+.wp-float-row .wp-float { width: clamp(140px, 26vw, 220px); }
 
 /* 小さめのカラーバリエーション一覧 */
 .wp-color-variants {
@@ -1824,7 +1834,9 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-evo em { animation-name: wp-pipeline-flow; font-size: 1rem; }
   .wp-evo .wp-float { width: 27vw; max-width: 100px; }
   .wp-evo .wp-float figcaption { font-size: 0.62rem; margin-top: 6px; }
-  .wp-float-lg { max-width: 280px; }
+  .wp-float-lg { max-width: 220px; }
+  .wp-float-row { gap: 14px; }
+  .wp-float-row .wp-float { width: 38vw; max-width: 160px; }
 
   /* 比較表はコンパクトに */
   .wp-table { font-size: 0.78rem; }
