@@ -1381,6 +1381,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   padding: 16px;
   box-sizing: border-box;
 }
+/* 文字入りの横長バナーは切り抜かず全体を見せる */
+.wp-origin-img-banner { height: auto; }
 .wp-origin-card h4 {
   font-size: 0.95rem;
   font-weight: 700;
