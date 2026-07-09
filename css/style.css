@@ -1286,6 +1286,8 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-evo .wp-float { width: clamp(140px, 22vw, 200px); flex-shrink: 0; }
 .wp-float-lg { max-width: 420px; margin: 0 auto 28px; }
 .wp-float-lg img { filter: drop-shadow(0 22px 28px rgba(74, 70, 85, 0.2)); }
+/* 四角い写真調の画像に角丸を付けたい場合 */
+.wp-float-rounded img { border-radius: var(--radius); }
 /* 白背景で撮影/レンダリングされた被写体が浮いて見えないよう、
    足元にぼかしたパステルの光だまりを敷いて馴染ませる */
 .wp-float-grounded { position: relative; }
