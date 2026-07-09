@@ -1637,6 +1637,9 @@ body.hero-in .line-inner { transform: translateY(0); }
   grid-template-columns: minmax(0, 480px);
   justify-content: center;
 }
+/* スマホの画面キャプチャなど、縦長画像を小さめに並べたいギャラリー */
+.wp-gallery-compact { grid-template-columns: repeat(3, 1fr); }
+.wp-gallery-compact .wp-shot-logo img { padding: 10px 12px; }
 .wp-shot {
   border-radius: var(--radius);
   overflow: hidden;
@@ -1735,6 +1738,8 @@ body.hero-in .line-inner { transform: translateY(0); }
 /* 詳細ページ: スマホ幅 */
 @media (max-width: 520px) {
   .wp-gallery { grid-template-columns: 1fr; }
+  .wp-gallery-compact { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .wp-gallery-compact figcaption { font-size: 0.62rem; padding: 6px 4px; }
   /* つくる/発信する/売る: 見出し+説明の横並び行でコンパクトに */
   .wp-cards3 { grid-template-columns: 1fr; gap: 8px; }
   .wp-origin-grid { grid-template-columns: 1fr; gap: 14px; }
