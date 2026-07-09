@@ -1326,6 +1326,22 @@ body.hero-in .line-inner { transform: translateY(0); }
   padding: 4px 14px;
   margin-bottom: 12px;
 }
+.wp-origin-link { position: relative; display: block; }
+.wp-origin-link-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+.wp-origin-link:hover .wp-origin-link-icon { transform: scale(1.1); }
 .wp-origin-img {
   display: block;
   width: 100%;
@@ -1352,6 +1368,23 @@ body.hero-in .line-inner { transform: translateY(0); }
   color: var(--ink-soft);
   line-height: 1.8;
   margin: 0;
+}
+/* 背景→仮説のように、2枚のカードを矢印でつなぐ配置 */
+.wp-origin-pair {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  margin-top: 20px;
+}
+.wp-origin-pair .wp-origin-card { flex: 1; }
+.wp-origin-arrow {
+  flex-shrink: 0;
+  align-self: center;
+  font-style: normal;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  animation: wp-pipeline-flow 1.6s ease-in-out infinite;
 }
 .wp-origin-conclusion {
   text-align: center;
@@ -1705,6 +1738,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   /* つくる/発信する/売る: 見出し+説明の横並び行でコンパクトに */
   .wp-cards3 { grid-template-columns: 1fr; gap: 8px; }
   .wp-origin-grid { grid-template-columns: 1fr; gap: 14px; }
+  .wp-origin-pair { flex-direction: column; }
+  .wp-origin-arrow { animation-name: wp-pipeline-flow-vertical; }
   .wp-rank-layout { grid-template-columns: 1fr; }
   .wp-rank-shot { max-width: 200px; margin: 0 auto; }
   .wp-cards3 > div {
