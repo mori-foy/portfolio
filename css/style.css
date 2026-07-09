@@ -913,8 +913,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   .works-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .work-card-featured { grid-column: span 2; grid-row: span 1; }
   .work-card-featured .work-thumb { aspect-ratio: 16 / 10; }
-  /* スマホ: 絵柄がやや下寄りなので、下側を多めに見せて視覚的に中央へ */
-  .work-card-featured .work-thumb img { object-position: center center; }
+  /* スマホ: 縦長比率になり上部の余白が広く写り込むため、被写体のいる下側基準でクロップ */
+  .work-card-featured .work-thumb img { object-position: center bottom; }
   .work-card-featured h3 { font-size: 1.1rem; }
   /* タイトル/サブタイトルの行数差でカードの見た目の高さがバラつかないよう
      2行分の高さを確保して隣同士の段を揃える */
