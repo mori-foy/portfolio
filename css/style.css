@@ -559,9 +559,11 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-nextjs { background: #000; }
 .tool-firebase { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-vercel { background: #000; }
-.tool-html { background: #e34f26; }
-.tool-css { background: #1572b6; }
+.tool-html { background: #e34f26; color: #fff; }
+.tool-css { background: #1572b6; color: #fff; }
 .tool-js { background: #f7df1e; }
+.wp-tools .tool-html,
+.wp-tools .tool-css { font-size: 0.65rem; }
 /* project info 内はひとまわり小さく */
 .wp-tools { margin-bottom: 0; padding: 2px 0; }
 .wp-tools .tool-icon {
@@ -1722,6 +1724,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   padding: 18px 24px;
   box-sizing: border-box;
 }
+/* 縦横比がバラバラな画面キャプチャを、グリッドの高さが揃うように統一 */
+.wp-shot-uniform img { aspect-ratio: 6 / 5; }
 .wp-shot figcaption {
   font-family: var(--font-accent);
   font-size: 0.75rem;
