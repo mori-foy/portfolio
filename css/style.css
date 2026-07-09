@@ -1388,7 +1388,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-rank-5 { background: linear-gradient(180deg, #f3cf6a, #d9a934); }
 
 /* ブランドカラーバー */
-.wp-color { margin-top: 14px; }
+.wp-color { margin: 14px auto 0; max-width: 360px; }
 .wp-color-labels {
   display: flex;
   font-family: var(--font-accent);
