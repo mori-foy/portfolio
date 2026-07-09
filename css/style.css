@@ -1265,8 +1265,27 @@ body.hero-in .line-inner { transform: translateY(0); }
 
 /* 進化ステップ(画像 + 矢印) */
 .wp-evo { margin-top: 24px; gap: clamp(10px, 2.4vw, 22px); }
-.wp-evo .wp-shot { width: clamp(140px, 22vw, 200px); margin: 0; flex-shrink: 0; }
 .wp-evo em { font-size: 1.3rem; }
+
+/* 透過背景の画像をカード枠なしで浮かせて配置 */
+.wp-float {
+  text-align: center;
+  margin: 0;
+}
+.wp-float img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 16px 20px rgba(74, 70, 85, 0.16));
+}
+.wp-float figcaption {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+.wp-evo .wp-float { width: clamp(140px, 22vw, 200px); flex-shrink: 0; }
+.wp-float-lg { max-width: 420px; margin: 0 auto 28px; }
+.wp-float-lg img { filter: drop-shadow(0 22px 28px rgba(74, 70, 85, 0.2)); }
 
 /* 制作背景(きっかけ2カード + 結論) */
 .wp-origin-grid {
@@ -1743,7 +1762,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   .wp-pipeline { flex-direction: column; gap: 6px; }
   .wp-pipeline em { animation-name: wp-pipeline-flow-vertical; }
   .wp-pipeline span { width: 100%; max-width: 260px; text-align: center; }
-  .wp-evo .wp-shot { width: 100%; max-width: 200px; }
+  .wp-evo .wp-float { width: 100%; max-width: 200px; }
+  .wp-float-lg { max-width: 280px; }
 
   /* 比較表はコンパクトに */
   .wp-table { font-size: 0.78rem; }
