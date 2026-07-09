@@ -1726,6 +1726,7 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 /* 縦横比がバラバラな画面キャプチャを、グリッドの高さが揃うように統一 */
 .wp-shot-uniform img { aspect-ratio: 6 / 5; }
+.wp-shot-uniform-square img { aspect-ratio: 1 / 1; }
 .wp-shot figcaption {
   font-family: var(--font-accent);
   font-size: 0.75rem;
