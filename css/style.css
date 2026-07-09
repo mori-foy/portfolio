@@ -559,6 +559,9 @@ body.hero-in .line-inner { transform: translateY(0); }
 .tool-nextjs { background: #000; }
 .tool-firebase { background: #fdfdfd; border: 1px solid rgba(139, 134, 153, 0.16); }
 .tool-vercel { background: #000; }
+.tool-html { background: #e34f26; }
+.tool-css { background: #1572b6; }
+.tool-js { background: #f7df1e; }
 /* project info 内はひとまわり小さく */
 .wp-tools { margin-bottom: 0; padding: 2px 0; }
 .wp-tools .tool-icon {
@@ -833,7 +836,6 @@ body.hero-in .line-inner { transform: translateY(0); }
    ------------------------------------------------------------ */
 #contact { text-align: center; }
 #contact .section-head { justify-content: center; }
-.contact-lead { color: var(--ink-soft); margin-bottom: 40px; }
 .sns-links {
   display: flex;
   justify-content: center;
