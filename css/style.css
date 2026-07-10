@@ -983,9 +983,17 @@ body.hero-in .line-inner { transform: translateY(0); }
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .wp-qr-play:hover { transform: translateY(-2px); box-shadow: 0 12px 22px rgba(157, 184, 232, 0.45); }
+.wp-qr-note {
+  font-size: 0.68rem;
+  color: var(--ink-soft);
+  text-align: center;
+  max-width: 130px;
+  line-height: 1.5;
+}
 @media (max-width: 640px) {
-  .wp-qr { position: static; flex-direction: row; margin-top: 18px; }
+  .wp-qr { position: static; flex-direction: row; flex-wrap: wrap; margin-top: 18px; }
   .wp-qr img { width: 64px; height: 64px; }
+  .wp-qr-note { max-width: none; width: 100%; text-align: left; margin-top: 4px; }
 }
 .wp-meta {
   font-family: var(--font-accent);
