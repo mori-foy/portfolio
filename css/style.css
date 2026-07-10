@@ -452,14 +452,31 @@ body.hero-in .line-inner { transform: translateY(0); }
   font-weight: 700;
   font-size: 0.88rem;
   color: var(--ink);
-  margin: 0 0 8px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-.about-faq-q::before { content: "Q. "; color: var(--accent); }
+.about-faq-q::-webkit-details-marker { display: none; }
+.about-faq-q::before { content: "Q."; color: var(--accent); flex-shrink: 0; }
+.about-faq-q::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-left: auto;
+  border-right: 1.5px solid var(--accent);
+  border-bottom: 1.5px solid var(--accent);
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+.about-faq-item[open] .about-faq-q::after { transform: rotate(-135deg); }
 .about-faq-a {
   font-size: 0.82rem;
   line-height: 1.85;
   color: var(--ink-soft);
-  margin: 0;
+  margin: 10px 0 0;
 }
 .tool-icons {
   display: flex;
