@@ -440,6 +440,27 @@ body.hero-in .line-inner { transform: translateY(0); }
   margin: 26px 0 14px;
 }
 .mini-title:first-child { margin-top: 0; }
+.about-faq { display: flex; flex-direction: column; gap: 14px; }
+.about-faq-item {
+  background: rgba(207, 228, 245, 0.2);
+  border: 1px solid rgba(139, 134, 153, 0.14);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+}
+.about-faq-q {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.about-faq-q::before { content: "Q. "; color: var(--accent); }
+.about-faq-a {
+  font-size: 0.82rem;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin: 0;
+}
 .tool-icons {
   display: flex;
   flex-wrap: wrap;
