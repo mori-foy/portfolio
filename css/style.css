@@ -541,6 +541,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   transition: transform 0.2s ease;
 }
 .skill-tags li:hover { transform: translateY(-3px); }
+.hobby-tags li { background: #fff; }
 .history { list-style: none; }
 .history li {
   display: flex;
