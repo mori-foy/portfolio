@@ -359,6 +359,25 @@ void main(){
     }, 4000);
   }
 
+  /* ---------- hobby tags: tap to reveal a one-line note ---------- */
+  document.querySelectorAll(".hobby-tag-btn").forEach((btn) => {
+    const li = btn.closest("li");
+    const note = document.createElement("span");
+    note.className = "hobby-note";
+    note.textContent = btn.dataset.note || "";
+    li.appendChild(note);
+    btn.addEventListener("click", () => {
+      const isOpen = li.classList.contains("is-open");
+      document.querySelectorAll(".hobby-tags li.is-open").forEach((el) => el.classList.remove("is-open"));
+      if (!isOpen) li.classList.add("is-open");
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".hobby-tags")) {
+      document.querySelectorAll(".hobby-tags li.is-open").forEach((el) => el.classList.remove("is-open"));
+    }
+  });
+
   /* ---------- about policy: slow down handwritten video ---------- */
   const policyVideo = document.getElementById("policyVideo");
   if (policyVideo) {

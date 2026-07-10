@@ -541,7 +541,61 @@ body.hero-in .line-inner { transform: translateY(0); }
   transition: transform 0.2s ease;
 }
 .skill-tags li:hover { transform: translateY(-3px); }
-.hobby-tags li { background: #fff; }
+.hobby-tags li {
+  position: relative;
+  padding: 0;
+  background: none;
+  border: none;
+  overflow: visible;
+}
+.hobby-tag-btn {
+  font: inherit;
+  font-size: 0.82rem;
+  color: inherit;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(139, 134, 153, 0.12);
+  transition: transform 0.2s ease;
+}
+.hobby-tag-btn:hover { transform: translateY(-3px); }
+.hobby-note {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%) translateY(6px);
+  width: max-content;
+  max-width: 220px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(139, 134, 153, 0.22);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--ink, #333);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 5;
+}
+.hobby-note::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #fff;
+}
+.hobby-tags li.is-open .hobby-note {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+@media (max-width: 640px) {
+  .hobby-note { max-width: 180px; }
+}
 .history { list-style: none; }
 .history li {
   display: flex;
