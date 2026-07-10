@@ -175,43 +175,6 @@ void main(){
     }
   }
 
-  /* ---------- glass cards: 3D tilt + parallax + sheen ---------- */
-  const cards = [...document.querySelectorAll(".g-card")];
-
-  if (hero && cards.length && FINE && !REDUCED) {
-    let tx = 0, ty = 0, cx = 0, cy = 0;
-    let lastX = 0, lastY = 0, pRaf = null;
-
-    function tiltLoop() {
-      cx += (tx - cx) * 0.08;
-      cy += (ty - cy) * 0.08;
-      for (const card of cards) {
-        const depth = parseFloat(card.dataset.depth || 1);
-        card.style.transform =
-          `translate3d(${(cx * depth * 26).toFixed(2)}px, ${(cy * depth * 18).toFixed(2)}px, 0) ` +
-          `rotateX(${(-cy * depth * 6).toFixed(2)}deg) rotateY(${(cx * depth * 8).toFixed(2)}deg)`;
-        const body = card.firstElementChild;
-        const r = card.getBoundingClientRect();
-        body.style.setProperty("--shx", `${(((lastX - r.left) / r.width) * 100).toFixed(1)}%`);
-        body.style.setProperty("--shy", `${(((lastY - r.top) / r.height) * 100).toFixed(1)}%`);
-      }
-      if (Math.abs(tx - cx) + Math.abs(ty - cy) > 0.001) pRaf = requestAnimationFrame(tiltLoop);
-      else pRaf = null;
-    }
-
-    hero.addEventListener(
-      "pointermove",
-      (e) => {
-        const r = hero.getBoundingClientRect();
-        tx = (e.clientX - r.left) / r.width - 0.5;
-        ty = (e.clientY - r.top) / r.height - 0.5;
-        lastX = e.clientX;
-        lastY = e.clientY;
-        if (!pRaf) tiltLoop();
-      },
-      { passive: true }
-    );
-  }
 
   /* ---------- masked line reveal ---------- */
   requestAnimationFrame(() => {
