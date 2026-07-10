@@ -1680,6 +1680,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   padding: 18px 24px;
   box-sizing: border-box;
 }
+/* 画像自体に余白がなく、カード側の追加パディングが不要な場合 */
+.wp-shot-flush img { padding: 0; }
 /* 縦横比がバラバラな画面キャプチャを、グリッドの高さが揃うように統一 */
 .wp-shot-uniform img { aspect-ratio: 6 / 5; }
 .wp-shot-uniform-square img { aspect-ratio: 1 / 1; }
