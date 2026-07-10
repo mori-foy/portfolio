@@ -77,14 +77,14 @@ void main(){
   float n = fbm(p*0.75 + 1.4*r);
   vec3 white = vec3(0.992);
   vec3 blue  = vec3(0.741, 0.902, 0.961);
-  vec3 lav   = vec3(0.867, 0.824, 0.941);
+  vec3 lav   = vec3(0.804, 0.749, 0.945);
   vec3 pink  = vec3(0.961, 0.827, 0.906);
   vec3 mint  = vec3(0.784, 0.925, 0.851);
   vec3 lemon = vec3(0.969, 0.941, 0.769);
   vec3 col = white;
   col = mix(col, blue,  smoothstep(0.38, 0.85, q.x) * 0.62);
   col = mix(col, pink,  smoothstep(0.40, 0.90, r.y) * 0.24);
-  col = mix(col, lav,   smoothstep(0.48, 0.95, n)   * 0.36);
+  col = mix(col, lav,   smoothstep(0.45, 0.92, n)   * 0.48);
   col = mix(col, mint,  smoothstep(0.55, 0.95, q.y) * 0.34);
   col = mix(col, lemon, smoothstep(0.62, 1.00, r.x) * 0.24);
   col = mix(col, white, 0.14);
