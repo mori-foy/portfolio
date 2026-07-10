@@ -1712,6 +1712,11 @@ body.hero-in .line-inner { transform: translateY(0); }
 /* スマホの画面キャプチャなど、縦長画像を小さめに並べたいギャラリー */
 .wp-gallery-compact { grid-template-columns: repeat(3, 1fr); }
 .wp-gallery-compact .wp-shot-logo img { padding: 10px 12px; }
+/* 文字量の多いカード画像(3種類の打ち手など)は3列だと潰れるため、
+   スマホでは1列に積む */
+@media (max-width: 640px) {
+  .wp-gallery-compact.wp-gallery-cards { grid-template-columns: 1fr; gap: 14px; }
+}
 .wp-shot {
   border-radius: var(--radius);
   overflow: hidden;
