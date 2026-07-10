@@ -84,7 +84,7 @@ void main(){
   vec3 col = white;
   col = mix(col, blue,  smoothstep(0.38, 0.85, q.x) * 0.70);
   col = mix(col, pink,  smoothstep(0.40, 0.90, r.y) * 0.24);
-  col = mix(col, lav,   smoothstep(0.45, 0.92, n)   * 0.36);
+  col = mix(col, lav,   smoothstep(0.50, 0.95, n)   * 0.22);
   col = mix(col, mint,  smoothstep(0.55, 0.95, q.y) * 0.34);
   col = mix(col, lemon, smoothstep(0.62, 1.00, r.x) * 0.24);
   col = mix(col, white, 0.14);
