@@ -369,7 +369,16 @@ void main(){
     btn.addEventListener("click", () => {
       const isOpen = li.classList.contains("is-open");
       document.querySelectorAll(".hobby-tags li.is-open").forEach((el) => el.classList.remove("is-open"));
-      if (!isOpen) li.classList.add("is-open");
+      if (!isOpen) {
+        note.style.setProperty("--note-shift", "0px");
+        li.classList.add("is-open");
+        const margin = 16;
+        const rect = note.getBoundingClientRect();
+        let shift = 0;
+        if (rect.left < margin) shift = margin - rect.left;
+        else if (rect.right > window.innerWidth - margin) shift = (window.innerWidth - margin) - rect.right;
+        if (shift !== 0) note.style.setProperty("--note-shift", `${shift}px`);
+      }
     });
   });
   document.addEventListener("click", (e) => {

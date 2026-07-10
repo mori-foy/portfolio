@@ -564,9 +564,9 @@ body.hero-in .line-inner { transform: translateY(0); }
   position: absolute;
   left: 50%;
   bottom: calc(100% + 10px);
-  transform: translateX(-50%) translateY(6px);
+  transform: translateX(calc(-50% + var(--note-shift, 0px))) translateY(6px);
   width: max-content;
-  max-width: 220px;
+  max-width: min(220px, calc(100vw - 32px));
   padding: 10px 14px;
   border-radius: 12px;
   background: #fff;
@@ -583,18 +583,18 @@ body.hero-in .line-inner { transform: translateY(0); }
   content: "";
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: calc(50% - var(--note-shift, 0px));
   transform: translateX(-50%);
   border: 6px solid transparent;
   border-top-color: #fff;
 }
 .hobby-tags li.is-open .hobby-note {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(calc(-50% + var(--note-shift, 0px))) translateY(0);
   pointer-events: auto;
 }
 @media (max-width: 640px) {
-  .hobby-note { max-width: 180px; }
+  .hobby-note { max-width: min(180px, calc(100vw - 32px)); }
 }
 .history { list-style: none; }
 .history li {
