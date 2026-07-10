@@ -1652,18 +1652,6 @@ body.hero-in .line-inner { transform: translateY(0); }
   text-align: center;
   padding: 8px 12px;
 }
-.wp-shot-empty {
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, rgba(207, 228, 245, 0.4), rgba(245, 211, 231, 0.4));
-}
-.wp-shot-empty span {
-  font-family: var(--font-accent);
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  color: var(--ink-soft);
-}
 .wp-info {
   display: grid;
   gap: 0;

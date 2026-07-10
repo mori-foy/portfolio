@@ -282,17 +282,26 @@ void main(){
   });
 
   /* ---------- IntersectionObserver: reveal + title split-in ---------- */
+  function markRevealed(el) {
+    el.classList.add(el.hasAttribute("data-split") ? "split-in" : "in");
+  }
+  // shrinking list of not-yet-revealed elements, kept in sync with the
+  // IntersectionObserver so the scroll safety-net below never has to
+  // re-query the DOM.
+  const pendingReveal = [...document.querySelectorAll(".reveal, [data-split]")];
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add(entry.target.hasAttribute("data-split") ? "split-in" : "in");
+        markRevealed(entry.target);
         io.unobserve(entry.target);
+        const idx = pendingReveal.indexOf(entry.target);
+        if (idx !== -1) pendingReveal.splice(idx, 1);
       });
     },
     { threshold: 0.18, rootMargin: "0px 0px -40px 0px" }
   );
-  document.querySelectorAll(".reveal, [data-split]").forEach((el) => io.observe(el));
+  pendingReveal.forEach((el) => io.observe(el));
 
   /* ---------- progress bar + parallax blobs ---------- */
   const progressBar = document.getElementById("progressBar");
@@ -312,12 +321,16 @@ void main(){
       // safety net: a fast flick-scroll or an instant anchor jump (reduced-motion)
       // can skip an element's viewport crossing between two frames, so the
       // IntersectionObserver never fires and it stays permanently hidden.
-      document.querySelectorAll(".reveal:not(.in), [data-split]:not(.split-in)").forEach((el) => {
+      // Iterates a shrinking cached list instead of re-querying the DOM,
+      // and becomes a no-op once every element has revealed.
+      for (let i = pendingReveal.length - 1; i >= 0; i--) {
+        const el = pendingReveal[i];
         if (el.getBoundingClientRect().top < window.innerHeight) {
-          el.classList.add(el.hasAttribute("data-split") ? "split-in" : "in");
+          markRevealed(el);
           io.unobserve(el);
+          pendingReveal.splice(i, 1);
         }
-      });
+      }
       ticking = false;
     });
   }
