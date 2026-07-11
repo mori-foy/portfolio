@@ -71,7 +71,7 @@ void main(){
   vec2 m = uMouse;
   m.x *= uRes.x / uRes.y;
   float md = distance(p, m);
-  vec2 mw = (p - m) * exp(-md * 3.0) * 0.45;
+  vec2 mw = (p - m) * exp(-md * 1.4) * 0.45;
   vec2 q = vec2(fbm(p*0.8 + vec2(0.0, t)), fbm(p*0.8 + vec2(5.2, t*1.35)));
   vec2 r = vec2(fbm(p*0.95 + 1.5*q + vec2(1.7, 9.2) + mw), fbm(p*0.95 + 1.5*q + vec2(8.3, 2.8) - mw));
   float n = fbm(p*0.75 + 1.4*r);
