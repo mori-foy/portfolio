@@ -1599,18 +1599,23 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-kpi-value {
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: clamp(2rem, 6vw, 2.7rem);
+  font-size: clamp(2.2rem, 6.6vw, 3rem);
   color: var(--ink);
   line-height: 1.35;
 }
 .wp-kpi-value .wp-kpi-arrow {
   color: var(--accent);
   font-weight: 400;
-  font-size: 0.75em;
+  font-size: 0.7em;
   margin: 0 2px;
 }
-.wp-kpi-value .wp-kpi-after { color: var(--accent-sky); }
+.wp-kpi-value .wp-kpi-after {
+  color: var(--accent-sky);
+  font-size: 1.3em;
+  font-weight: 800;
+}
 .wp-kpi-unit { font-size: 0.55em; font-weight: 400; }
+.wp-kpi-value .wp-kpi-after .wp-kpi-unit { font-size: 0.5em; }
 
 /* 小見出し */
 .wp-subhead {
