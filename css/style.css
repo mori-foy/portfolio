@@ -1576,16 +1576,21 @@ body.hero-in .line-inner { transform: translateY(0); }
 /* Before/After の数値インパクトを強調するKPIカード */
 .wp-kpi-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 14px;
   margin: 28px 0;
 }
 .wp-kpi-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 32px);
   text-align: center;
-  padding: 26px 14px;
+  padding: 22px 24px;
   border-radius: var(--radius);
   box-shadow: 0 14px 30px rgba(157, 184, 232, 0.18);
 }
+.wp-kpi-card .wp-kpi-label { margin-bottom: 0; min-width: 9em; text-align: right; }
 .wp-kpi-card:nth-child(1) { background: linear-gradient(135deg, rgba(207, 228, 245, 0.6), rgba(200, 236, 217, 0.6)); }
 .wp-kpi-card:nth-child(2) { background: linear-gradient(135deg, rgba(221, 210, 240, 0.6), rgba(245, 211, 231, 0.6)); }
 .wp-kpi-card:nth-child(3) { background: linear-gradient(135deg, rgba(247, 240, 196, 0.6), rgba(207, 228, 245, 0.6)); }
@@ -1599,22 +1604,22 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-kpi-value {
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: clamp(2.6rem, 8.5vw, 3.8rem);
+  font-size: clamp(2.9rem, 10vw, 4.4rem);
   color: var(--ink);
-  line-height: 1.25;
+  line-height: 1.2;
 }
 .wp-kpi-value .wp-kpi-arrow {
   color: var(--accent);
   font-weight: 400;
-  font-size: 0.6em;
+  font-size: 0.55em;
   margin: 0 2px;
 }
 .wp-kpi-value .wp-kpi-after {
   display: block;
   color: var(--accent-sky);
-  font-size: 1.4em;
+  font-size: 1.45em;
   font-weight: 800;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 .wp-kpi-unit { font-size: 0.55em; font-weight: 400; }
 .wp-kpi-value .wp-kpi-after .wp-kpi-unit { font-size: 0.5em; }
@@ -1876,7 +1881,9 @@ body.hero-in .line-inner { transform: translateY(0); }
   /* つくる/発信する/売る: 見出し+説明の横並び行でコンパクトに */
   .wp-cards3 { grid-template-columns: 1fr; gap: 8px; }
   .wp-origin-grid { grid-template-columns: 1fr; gap: 14px; }
-  .wp-kpi-grid { grid-template-columns: 1fr; gap: 12px; }
+  .wp-kpi-grid { gap: 12px; }
+  .wp-kpi-card { flex-direction: column; gap: 4px; padding: 20px 16px; }
+  .wp-kpi-card .wp-kpi-label { text-align: center; min-width: 0; }
   .wp-origin-pair { flex-direction: column; }
   .wp-origin-arrow { animation-name: wp-pipeline-flow-vertical; }
   .wp-rank-layout { grid-template-columns: 1fr; }
