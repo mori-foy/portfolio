@@ -1131,6 +1131,8 @@ body.hero-in .line-inner { transform: translateY(0); }
   margin-bottom: 8px;
 }
 .wp-cards3 p { font-size: 0.78rem; color: var(--ink-soft); margin: 0; }
+/* 4枚を2×2で並べたい場合の列数上書き */
+.wp-cards3-2col { grid-template-columns: repeat(2, 1fr); }
 
 /* 週ごとのタイムライン(右向き矢印) */
 .wp-timeline {
@@ -1154,6 +1156,10 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-tl-step:nth-child(2) { background: rgba(245, 199, 150, 0.55); }
 .wp-tl-step:nth-child(3) { background: rgba(245, 199, 150, 0.7); }
 .wp-tl-step:nth-child(4) { background: rgba(245, 199, 150, 0.85); }
+/* 5ステップ版(仕組み化の前にAI活用を挟みたい場合) */
+.wp-timeline-5 { grid-template-columns: repeat(5, 1fr); }
+.wp-timeline-5 .wp-tl-step:nth-child(4) { background: rgba(245, 199, 150, 0.78); }
+.wp-timeline-5 .wp-tl-step:nth-child(5) { background: rgba(245, 199, 150, 0.92); }
 .wp-tl-week {
   font-family: var(--font-accent);
   font-weight: 700;
@@ -1594,25 +1600,6 @@ body.hero-in .line-inner { transform: translateY(0); }
 }
 .wp-kpi-value .wp-kpi-after { color: var(--accent-sky); }
 .wp-kpi-unit { font-size: 0.55em; font-weight: 400; }
-
-/* 未提供の画像を差し込む場所を示すプレースホルダー */
-.wp-shot-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 4 / 3;
-  border: 1.5px dashed rgba(139, 134, 153, 0.35);
-  border-radius: var(--radius);
-  background: rgba(139, 134, 153, 0.04);
-}
-.wp-shot-placeholder span {
-  font-family: var(--font-accent);
-  font-size: 0.76rem;
-  color: var(--ink-soft);
-  text-align: center;
-  line-height: 1.7;
-  padding: 0 16px;
-}
 
 /* 小見出し */
 .wp-subhead {
