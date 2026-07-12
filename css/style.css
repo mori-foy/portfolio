@@ -1580,9 +1580,9 @@ body.hero-in .line-inner { transform: translateY(0); }
   margin-bottom: 10px;
 }
 .wp-kpi-value {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 800;
-  font-size: clamp(1.15rem, 3.4vw, 1.5rem);
+  font-size: clamp(1.6rem, 4.6vw, 2.1rem);
   color: var(--ink);
   line-height: 1.3;
 }
