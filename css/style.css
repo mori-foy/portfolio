@@ -1160,6 +1160,17 @@ body.hero-in .line-inner { transform: translateY(0); }
 .wp-timeline-5 { grid-template-columns: repeat(5, 1fr); }
 .wp-timeline-5 .wp-tl-step:nth-child(4) { background: rgba(245, 199, 150, 0.78); }
 .wp-timeline-5 .wp-tl-step:nth-child(5) { background: rgba(245, 199, 150, 0.92); }
+/* 文章量が多い場合: 矢羽根の横並びをやめ、読みやすい縦積みカードに */
+.wp-timeline-list { grid-template-columns: 1fr; gap: 12px; }
+.wp-timeline-list .wp-tl-step,
+.wp-timeline-list .wp-tl-step:first-child {
+  clip-path: none;
+  border-radius: 16px;
+  padding: 20px 24px;
+}
+.wp-timeline-list .wp-tl-week { font-size: 0.78rem; }
+.wp-timeline-list .wp-tl-step strong { font-size: 1.05rem; margin-bottom: 8px; }
+.wp-timeline-list .wp-tl-step p { font-size: 0.86rem; line-height: 1.8; }
 .wp-tl-week {
   font-family: var(--font-accent);
   font-weight: 700;
