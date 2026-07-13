@@ -387,6 +387,33 @@ void main(){
     }
   });
 
+  /* ---------- tool icons: tap to reveal a one-line note ---------- */
+  document.querySelectorAll(".tool-icon-note").forEach((icon) => {
+    const note = document.createElement("span");
+    note.className = "tool-note";
+    note.textContent = icon.dataset.note || "";
+    icon.appendChild(note);
+    icon.addEventListener("click", () => {
+      const isOpen = icon.classList.contains("is-open");
+      document.querySelectorAll(".tool-icon-note.is-open").forEach((el) => el.classList.remove("is-open"));
+      if (!isOpen) {
+        note.style.setProperty("--note-shift", "0px");
+        icon.classList.add("is-open");
+        const margin = 16;
+        const rect = note.getBoundingClientRect();
+        let shift = 0;
+        if (rect.left < margin) shift = margin - rect.left;
+        else if (rect.right > window.innerWidth - margin) shift = (window.innerWidth - margin) - rect.right;
+        if (shift !== 0) note.style.setProperty("--note-shift", `${shift}px`);
+      }
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".tool-icon-note")) {
+      document.querySelectorAll(".tool-icon-note.is-open").forEach((el) => el.classList.remove("is-open"));
+    }
+  });
+
   /* ---------- about policy: slow down handwritten video ---------- */
   const policyVideo = document.getElementById("policyVideo");
   if (policyVideo) {
