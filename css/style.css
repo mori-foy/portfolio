@@ -1057,6 +1057,12 @@ body.hero-in .line-inner { transform: translateY(0); }
   color: var(--ink-soft);
   margin-top: 10px;
 }
+.wp-sub-note {
+  font-size: 0.92rem;
+  color: var(--ink);
+  margin-top: 8px;
+  line-height: 1.7;
+}
 .wp-tags {
   display: flex;
   flex-wrap: wrap;
