@@ -1722,6 +1722,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   stroke-width: 1.5;
   vector-effect: non-scaling-stroke;
 }
+.wp-ui-line-b { stroke: var(--accent-sky); }
 .wp-ui-row-rev { grid-template-columns: 1fr minmax(0, 230px); }
 .wp-ui-row-rev .wp-ui-shot { order: 2; }
 .wp-ui-shot img {

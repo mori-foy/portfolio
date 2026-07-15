@@ -287,6 +287,34 @@ void main(){
   );
   pendingReveal.forEach((el) => io.observe(el));
 
+  /* ---------- UIのこだわり: marker→callout lines follow actual layout at any width ---------- */
+  const wpUiRows = document.querySelectorAll(".wp-ui-row");
+  const syncWpUiLines = () => {
+    wpUiRows.forEach((row) => {
+      const svg = row.querySelector(".wp-ui-lines");
+      if (!svg) return;
+      const rowRect = row.getBoundingClientRect();
+      svg.setAttribute("viewBox", `0 0 ${rowRect.width} ${rowRect.height}`);
+      svg.querySelectorAll("line").forEach((line) => {
+        const suffix = line.className.baseVal.match(/wp-ui-line-(\w)/);
+        const marker = row.querySelector(suffix ? `.wp-ui-marker-${suffix[1]}` : ".wp-ui-marker");
+        const callout = row.querySelector(suffix ? `.wp-ui-callout-${suffix[1]}` : ".wp-ui-callout");
+        if (!marker || !callout) return;
+        const mRect = marker.getBoundingClientRect();
+        const cRect = callout.getBoundingClientRect();
+        line.setAttribute("x1", mRect.left + mRect.width / 2 - rowRect.left);
+        line.setAttribute("y1", mRect.top + mRect.height / 2 - rowRect.top);
+        line.setAttribute("x2", cRect.left - rowRect.left);
+        line.setAttribute("y2", cRect.top + 20 - rowRect.top);
+      });
+    });
+  };
+  if (wpUiRows.length) {
+    syncWpUiLines();
+    window.addEventListener("resize", syncWpUiLines);
+    window.addEventListener("load", syncWpUiLines);
+  }
+
   /* ---------- progress bar + parallax blobs ---------- */
   const progressBar = document.getElementById("progressBar");
   const blobs = document.querySelectorAll(".blob");
@@ -302,6 +330,7 @@ void main(){
       blobs.forEach((b) => {
         b.style.transform = `translateY(${y * parseFloat(b.dataset.speed || 0.15)}px)`;
       });
+      if (wpUiRows.length) syncWpUiLines();
       // safety net: a fast flick-scroll or an instant anchor jump (reduced-motion)
       // can skip an element's viewport crossing between two frames, so the
       // IntersectionObserver never fires and it stays permanently hidden.
