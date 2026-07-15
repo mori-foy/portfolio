@@ -1,7 +1,7 @@
 /* ============================================================
    PORTFOLIO — main.js
    - hero: WebGL liquid pastel field / glass cards tilt /
-           masked line reveal / live clock
+           masked line reveal
    - scroll effects (reveal, parallax blobs, progress bar)
    ============================================================ */
 
@@ -181,22 +181,6 @@ void main(){
     setTimeout(() => document.body.classList.add("hero-in"), 80);
   });
 
-  /* ---------- live clock (Tokyo) ---------- */
-  const clockEl = document.getElementById("heroClock");
-  if (clockEl) {
-    const fmt = new Intl.DateTimeFormat("ja-JP", {
-      hour12: false,
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      timeZone: "Asia/Tokyo",
-    });
-    const tick = () => {
-      clockEl.textContent = fmt.format(new Date());
-    };
-    tick();
-    setInterval(tick, 1000);
-  }
 
   /* ==========================================================
      3. WORK DETAIL MODAL

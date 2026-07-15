@@ -231,7 +231,7 @@ body.hero-in .line-inner { transform: translateY(0); }
   z-index: 0;
 }
 
-/* top-right meta: location + live clock */
+/* top-right meta: location */
 .hero-meta {
   position: absolute;
   top: calc(var(--header-h) + 26px);
