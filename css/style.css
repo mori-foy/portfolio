@@ -621,21 +621,13 @@ body.hero-in .line-inner { transform: translateY(0); }
   flex-direction: column;
   gap: 4px;
   font-weight: 400;
-  font-size: 0.85em;
+  font-size: 0.78em;
   color: var(--ink-soft);
 }
 .history-papers li {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-.history-papers .award-badge {
-  width: 18px;
-  height: 18px;
-}
-.history-papers .award-badge svg {
-  width: 10px;
-  height: 10px;
 }
 .history-link {
   color: inherit;
