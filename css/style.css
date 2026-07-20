@@ -610,6 +610,20 @@ body.hero-in .line-inner { transform: translateY(0); }
   font-weight: 700;
   color: var(--ink);
 }
+.history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.history-papers {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 0.85em;
+  color: var(--ink-soft);
+}
 .history-link {
   color: inherit;
   text-decoration: underline;
